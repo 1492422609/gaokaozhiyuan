@@ -8,6 +8,7 @@ Page({
   },
   onLoad: function() {},
   onGotUserInfo: function(o) {
+   
       if (o.detail.userInfo) {
           try {
               wx.getStorageSync("user_openid") || (console.log("执行login1"), wx.login({
@@ -93,5 +94,6 @@ Page({
               angle: n
           });
       });
-  }
+  },
+
 });

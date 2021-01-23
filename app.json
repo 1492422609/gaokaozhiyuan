@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/jiazai/jiazai",
     "pages/index/index",
     "pages/categorys/index",
     "pages/goods_list/index",
@@ -15,8 +16,8 @@
     "pages/pay/index",
     "pages/new_index/index",
     "pages/scanf-grade/index",
-    "pages/tianxiechengji/index",
-    "pages/jiazai/jiazai"
+    "pages/tianxiechengji/index"
+
   ],
   "tabBar": {
     "color": "#999",
