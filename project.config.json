@@ -23,6 +23,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -30,13 +31,12 @@
     },
     "bundle": false,
     "useIsolateContext": true,
-    "useCompilerModule": false,
+    "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "useApiHostProcess": true
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.2",
@@ -56,53 +56,17 @@
     "conversation": {
       "list": []
     },
-    "plugin": {
+    "game": {
       "list": []
     },
-    "game": {
+    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "pages/feedback/index",
-          "pathName": "pages/feedback/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/user/index",
-          "pathName": "pages/user/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/user/index",
-          "pathName": "pages/user/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": 4,
-          "name": "pages/jiazai/jiazai",
-          "pathName": "pages/jiazai/jiazai",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }
