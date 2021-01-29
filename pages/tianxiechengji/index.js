@@ -149,9 +149,17 @@ Page({
    wx.navigateBack({
      delta: 0,
    })
+
+
+
+
  },
 // getPhoneNumber:function(e){
 // var that = this ;
 // console.log(e.detail.errMsg=="getPhoneNumber");
 // }
+onLoad(){
+
+}
+
 })
