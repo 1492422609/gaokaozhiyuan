@@ -15,6 +15,12 @@ onGotUserInfo(e){
       wx.switchTab({
         url: '/pages/index/index',
       })
+      wx.login({
+        success(res)
+        {
+          console.log("res.code:"+res.code)
+        }
+      })
 },
 
 onReady: function() {
