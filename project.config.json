@@ -23,12 +23,13 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": false,
@@ -40,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.2",
-  "appid": "wxe895bb1a185a44d0",
+  "appid": "wxbd43ad6494d5522c",
   "projectname": "miniprogram-3",
   "debugOptions": {
     "hidedInDevtools": []

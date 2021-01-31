@@ -3,7 +3,8 @@ Page({
   data: {
     remind: "加载中",
     angle: 0,
-    userInfo: {}
+    userInfo: {},
+    openid:""
 },
 onLoad: function() {
 //   wx.request({
@@ -13,6 +14,12 @@ onLoad: function() {
 //       console.log(res);
 //     }
 // })
+
+
+
+
+
+
 
 var that = this
 wx.login({
@@ -25,14 +32,18 @@ wx.login({
         url: 'https://api.weixin.qq.com/sns/jscode2session',
         data: {
           js_code: res.code,
-          appid: 'wxe895bb1a185a44d0',
+          appid: 'wxbd43ad6494d5522c',
           grant_type: 'authorization_code',
-          secret: '262c6a78a2787c00875f66e26a6f8fd3'
+          secret: 'c8d1e3302befd17c8c214a7bc8a6e86c'
         },
         success(res) {
           console.log(res.data.openid)
           //将唯一标识保存在本地
-          _that.data.userid = res.data.openid
+          // this.setData({
+          //   openid:res.data.openid
+          // })
+          // _that.data.userid = res.data.openid
+
         }
       })
 
@@ -54,11 +65,25 @@ wx.login({
 //   }
 // })
 
-
+ //   wx.request({
+    //     url: 'http://wechaiapp.shangweishuju.com/Zhike/Users/GetEntity',
+    //     data:{
+    //       openid:res.openid,
+    //     },
+    //     header: {
+    //      'content-type': 'application/json' //默认值
+    //    },
+    //     method:'POST',
+    //     success: function (res) {
+    //      console.log(res)
+    //    }
+    //   })
+    //  }
 
 },
 onGotUserInfo(e){
-    console.log(e)
+  // var a=data.openid;
+    // console.log()
     const {
         userInfo
       } = e.detail;
@@ -66,6 +91,27 @@ onGotUserInfo(e){
       wx.switchTab({
         url: '/pages/index/index',
       })
+      wx.request({
+        url: 'http://wechaiapp.shangweishuju.com/Zhike/Users/GetEntity',
+        data:{
+          OpenID:'111',
+        },
+        header: {
+         'content-type': 'application/json' //默认值
+       },
+        method:'POST',
+        success: function (res) {
+          if(res.statusCode==200)
+          {
+           //操作成功
+           console.log('操作成功了')
+          }else{
+            //操作失败
+          }
+         console.log(res)
+       }
+      })
+    
      
 },
 
