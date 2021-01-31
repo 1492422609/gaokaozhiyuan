@@ -7,26 +7,11 @@ Page({
     openid:""
 },
 onLoad: function() {
-//   wx.request({
-//     url:'http://wechaiapp.shangweishuju.com/Zhike/Users/GetOpenId',//随便拿个网址演示
-//     method:'post',
-//     success(res){
-//       console.log(res);
-//     }
-// })
-
-
-
-
-
-
-
-var that = this
+var that =this
 wx.login({
   success(res) {
     console.log(res.code)
     if (res.code) {
-      var _that = that
       //发起网络请求
       wx.request({
         url: 'https://api.weixin.qq.com/sns/jscode2session',
@@ -39,11 +24,9 @@ wx.login({
         success(res) {
           console.log(res.data.openid)
           //将唯一标识保存在本地
-          // this.setData({
-          //   openid:res.data.openid
-          // })
-          // _that.data.userid = res.data.openid
-
+          that.setData({
+            openid:res.data.openid
+          })
         }
       })
 
@@ -52,19 +35,6 @@ wx.login({
     }
   }
 })
-
-
-// wx.request({
-//   url: 'http://wechaiapp.shangweishuju.com/Zhike/Users/GetOpenId', //仅为示例，并非真实的接口地址
-//   method:'post',
-//   header: {
-//     'content-type': 'application/json' // 默认值
-//   },
-//   success (res) {
-//     console.log(res.data)
-//   }
-// })
-
  //   wx.request({
     //     url: 'http://wechaiapp.shangweishuju.com/Zhike/Users/GetEntity',
     //     data:{
@@ -82,33 +52,57 @@ wx.login({
 
 },
 onGotUserInfo(e){
-  // var a=data.openid;
-    // console.log()
+  var that =this
+  console.log(that.data.openid)
+
     const {
         userInfo
       } = e.detail;
       wx.setStorageSync("userinfo", userInfo);
-      wx.switchTab({
-        url: '/pages/index/index',
+      that.setData({
+        userInfo:e.detail.userInfo
       })
+
+      
       wx.request({
         url: 'http://wechaiapp.shangweishuju.com/Zhike/Users/GetEntity',
         data:{
-          OpenID:'111',
+          OpenID:that.data.openid,
         },
         header: {
          'content-type': 'application/json' //默认值
        },
         method:'POST',
         success: function (res) {
-          if(res.statusCode==200)
+          if(res.data.code==2000)
           {
-           //操作成功
-           console.log('操作成功了')
+            wx.switchTab({
+              url: '/pages/index/index',
+            })
           }else{
-            //操作失败
+            wx.request({
+              url: 'http://wechaiapp.shangweishuju.com/Zhike/Users/Add',
+              data:{
+                OpenID:that.data.openid,
+                UserName:that.data.userInfo.nickName,
+                Country:that.data.userInfo.Country,
+                Province:that.data.userInfo.Province,
+                City:that.data.userInfo.City,
+                AvatarUrl:that.data.userInfo.avatarUrl,
+              },
+              header: {
+                'content-type': 'application/json' //默认值
+              },
+               method:'POST',
+               success:function(res){
+                wx.switchTab({
+                  url: '/pages/index/index',
+                })
+               }
+            
+            })
           }
-         console.log(res)
+
        }
       })
     
