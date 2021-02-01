@@ -71,6 +71,12 @@
         {
           "name": "pages/tianxiechengji/index",
           "pathName": "pages/tianxiechengji/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "scene": null
         }
       ]

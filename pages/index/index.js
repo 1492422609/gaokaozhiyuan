@@ -97,10 +97,17 @@ Page({
     wx.setStorageSync("userinfo", userInfo);
   },
   data:{
-  userinfo:{}
+  userinfo:{},
+  Phone:''
+},
+onLoad(){
+   const Phone =wx.getStorageSync('Phone')
+   const phone = "11"
+   this.setData({phone})
 },
 onShow(){
   const userinfo=wx.getStorageSync("userinfo");
   this.setData({userinfo})
+  // this.setData({phone})
 }
 })
