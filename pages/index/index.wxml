@@ -8,16 +8,16 @@
 </view>
 </view> -->
 
-<block wx:if="{{phone}}">
+<block wx:if="{{isShowConfirm}}">
       <view class='toast-box'>
         <view class='toastbg'></view>
         <view class='showToast'>
             <view class='toast-title'>
-                <text>确认支付</text>
+                <text>手机号码填写（仅需填写一次）</text>
             </view>
             <view class='toast-main'>
                 <view class='toast-input'>
-                    <input type='password' placeholder='输入支付密码' bindinput='setValue' data-name='stuEidtName'></input>
+                    <input type="number" placeholder='输入手机号' bindinput='phone' data-name='stuEidtName'></input>
                 </view>
             </view>
             <view class='toast-button'>
@@ -25,7 +25,7 @@
                     <button catchtap='cancel'>取消</button>
                 </view>
                 <view class='button2'>
-                    <button data-url="../allOrder/allOrder" catchtap='confirmAcceptance'>确定</button>
+                    <button data-url="../allOrder/allOrder" catchtap='setphone'>确定</button>
                 </view>
             </view>
         </view>

@@ -64,28 +64,8 @@ const pageObject = {
 }
 
 
-/*
-for (let i = 0; i < types.length; ++i) {
-  (function (type) {
-    pageObject[type] = function () {
-      const key = type + 'Size'
-      const changedData = {}
-      changedData[key] =
-        this.data[key] === 'default' ? 'mini' : 'default'
-      this.setData(changedData)
-    }
-  }(types[i]))
-}
 
 
-
-
-<view class="page-body">
-  <view class="btn-area" id="buttonContainer"> 
-    <button type="default" plain="true" class="mini-btn" bindtap='onTapDayWeather'>请输入成绩</button>   
- </view>
- </view>
-*/
 
 // Page(pageObject)
 Page({
@@ -98,16 +78,58 @@ Page({
   },
   data:{
   userinfo:{},
-  Phone:''
+  Phone:'',
+  isShowConfirm:'true',
+},
+setphone:function(e){
+  var that=this
+  var openid=wx.getStorageSync('openid')
+  console.log(this.data.Phone)
+  wx.request({
+    url: 'http://wechaiapp.shangweishuju.com/Users/UpdateUserPhone',
+    data: {
+      openID: openid,
+      phone:this.data.Phone
+    },
+    header: {
+      'content-type': 'application/json' //默认值
+    },
+    method: 'POST',
+
+    success: function (res) {
+      console.log(res)
+      if(res.data.code==2000){
+        that.setData({
+          isShowConfirm: false,
+        })
+      }
+    }
+  })
+
+},
+phone:function(e){
+this.setData({
+  Phone:e.detail.value,
+})
+// wx.setStorageSync('Phone', e.detail.Phonenumber)
 },
 onLoad(){
    const Phone =wx.getStorageSync('Phone')
-   const phone = "11"
-   this.setData({phone})
+   if(Phone){
+     this.setData({
+       isShowConfirm:false,
+     })
+   }
+  else{
+     this.setData({
+        isShowConfirm: true,
+     })
+   }
 },
 onShow(){
   const userinfo=wx.getStorageSync("userinfo");
   this.setData({userinfo})
   // this.setData({phone})
 }
+
 })

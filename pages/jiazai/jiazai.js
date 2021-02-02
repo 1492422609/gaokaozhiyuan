@@ -26,6 +26,7 @@ Page({
               that.setData({
                 openid: res.data.openid
               })
+              wx.setStorageSync('openid', res.data.openid)
             }
           })
 
@@ -81,9 +82,9 @@ Page({
             method: 'POST',
             success: function (res) {
               console.log(res)
-              // wx.switchTab({
-              //   url: '/pages/index/index',
-              // })
+              wx.switchTab({
+                url: '/pages/index/index',
+              })
 
             }
 
