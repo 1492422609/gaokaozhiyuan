@@ -42,7 +42,6 @@ phone:function(e){
 this.setData({
   Phone:e.detail.value,
 })
-// wx.setStorageSync('Phone', e.detail.Phonenumber)
 },
 onLoad(){
    const Phone =wx.getStorageSync('Phone')
@@ -60,7 +59,6 @@ onLoad(){
 onShow(){
   const userinfo=wx.getStorageSync("userinfo");
   this.setData({userinfo})
-  // this.setData({phone})
 }
 
 })

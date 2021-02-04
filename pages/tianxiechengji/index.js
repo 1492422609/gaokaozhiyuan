@@ -3,6 +3,8 @@ Page({
 
   
   data: {
+    gaokaozongfen:'',
+    paiming:'',
     array: ['科目一','物理', '化学','生物','政治','历史','地理'],
     array0: ['科目二','物理', '化学','生物','政治','历史','地理'],
     array1: ['科目三','物理', '化学','生物','政治','历史','地理'],
@@ -146,20 +148,45 @@ Page({
   // },
 
  queding(){
-   wx.navigateBack({
-     delta: 0,
-   })
+   var that=this
+   const Phone=wx.getStorageSync('Phone')
+   console.log(Phone)
+   console.log(that.data.gaokaozongfen)
+   console.log(that.data.paiming)
+  wx.request({
+    url: 'http://wechaiapp.shangweishuju.com/Users/UpdateUserCcore',
+    data: {
+      Phone:Phone,
+      TotalCcore:that.data.gaokaozongfen,
+      Ranking:that.data.paiming
+    },
+    header: {
+      'content-type': 'application/json' //默认值
+    },
+    method: 'POST',
+    success: function (res) {
+      console.log(res)
+    
+    }
+  })
 
-
-
-
+  //  wx.navigateBack({
+  //    delta: 0,
+  //  })
+  console.log()
  },
-// getPhoneNumber:function(e){
-// var that = this ;
-// console.log(e.detail.errMsg=="getPhoneNumber");
-// }
+zongfen:function(e){
+  this.setData({
+    gaokaozongfen:e.detail.value
+  })
+  console.log(this.data.gaokaozongfen)
+},
+paiming:function(e){
+this.setData({
+  paiming:e.detail.value
+})
+console.log(this.data.paiming)
+},
 onLoad(){
-
 }
-
 })

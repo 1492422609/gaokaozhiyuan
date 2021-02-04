@@ -10,8 +10,8 @@
  </view>
 </picker>
 </view> -->
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image>高考总分<input class="input" name="userName" placeholder="650" bindinput="chengji"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image>全省排名<input class="input" name="userName" placeholder="3500" bindinput="paiming"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image>高考总分<input class="input" name="userName" placeholder="650" bindinput="zongfen"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png" ></image>全省排名<input class="input" name="userName" placeholder="3500" bindinput="paiming"/></view>
 <view class=""></view>
 <view class="tongyong"><image class="xingxing" src="/images/star.png"></image>科目类别 
 <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
@@ -19,7 +19,7 @@
       {{array[index]}}
     </view>
 </picker>
-<picker bindchange="bindPickerChange0" value="{{index0}}" range="{{array0}}">
+<picker bindchange="bindPickerChange0" value="{{index0}}" range="{{array0}}" >
     <view class="picker">
       {{array0[index0]}}
     </view>
