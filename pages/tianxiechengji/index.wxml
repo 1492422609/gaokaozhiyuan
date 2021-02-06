@@ -30,8 +30,8 @@
     </view>
 </picker>
 </view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="paiming"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index0]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="paiming"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index1]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="paiming"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="kemuyi"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index0]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="kemuer"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index1]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="kemusan"/></view>
 <view class="dibuxiaozi">依据历年数据进行推荐，最新招生计划将在每年6月更新</view>
 <view class="changqueding" id="buttonContainer" bindtap="queding"><button type="primary" class="daqueding">确定</button></view>
