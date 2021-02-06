@@ -16,9 +16,9 @@ Page({
             url: 'https://api.weixin.qq.com/sns/jscode2session',
             data: {
               js_code: res.code,
-              appid: 'wxbd43ad6494d5522c',
+              appid: 'wxe895bb1a185a44d0',
               grant_type: 'authorization_code',
-              secret: 'c8d1e3302befd17c8c214a7bc8a6e86c'
+              secret: '262c6a78a2787c00875f66e26a6f8fd3'
             },
             success(res) {
               console.log(res.data.openid)

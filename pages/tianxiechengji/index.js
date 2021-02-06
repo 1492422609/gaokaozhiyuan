@@ -170,10 +170,12 @@ Page({
     },
     method: 'POST',
     success: function (res) {
-      if(res.code==2000){
+      if(res.data.code==2000){
            wx.navigateBack({
      delta: 0,
    })
+      }else{
+        
       }
     
     }

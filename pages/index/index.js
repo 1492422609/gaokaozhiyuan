@@ -26,12 +26,14 @@ setphone:function(e){
       'content-type': 'application/json' //默认值
     },
     method: 'POST',
-
     success: function (res) {
       console.log(res)
       if(res.data.code==2000){
         that.setData({
           isShowConfirm: false,
+        })
+        wx.navigateTo({
+          url: 'pages/index/index',
         })
       }
     }
