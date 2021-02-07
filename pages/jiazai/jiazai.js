@@ -66,30 +66,7 @@ Page({
             url: '/pages/index/index',
           })
         } else {
-          wx.request({
-            url: 'http://wechaiapp.shangweishuju.com/Zhike/Users/Add',
-            data: {
-              OpenID: that.data.openid,
-              UserName: that.data.userInfo.nickName,
-              Country: that.data.userInfo.country,
-              Province: that.data.userInfo.province,
-              City: that.data.userInfo.city,
-              AvatarUrl: that.data.userInfo.avatarUrl,
-            },
-            header: {
-              'content-type': 'application/json' //默认值
-            },
-            method: 'POST',
-            success: function (res) {
-              console.log(res)
-              wx.switchTab({
-                url: '/pages/index/index',
-              })
-
-            }
-
-          })
-
+        
         }
 
       }

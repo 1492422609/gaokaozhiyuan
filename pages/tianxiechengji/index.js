@@ -175,7 +175,9 @@ Page({
      delta: 0,
    })
       }else{
-        
+        wx.switchTab({
+          url: '/pages/index/index',
+        })
       }
     
     }

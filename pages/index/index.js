@@ -12,6 +12,14 @@ Page({
   Phone:'',
   isShowConfirm:'true',
 },
+cancel:function(){
+  that.setData({
+    isShowConfirm: false,
+  })
+  wx.navigateTo({
+    url: 'pages/index/index',
+  })
+},
 setphone:function(e){
   var that=this
   var openid=wx.getStorageSync('openid')
@@ -29,6 +37,13 @@ setphone:function(e){
     success: function (res) {
       console.log(res)
       if(res.data.code==2000){
+        that.setData({
+          isShowConfirm: false,
+        })
+        wx.navigateTo({
+          url: 'pages/index/index',
+        })
+      }else{
         that.setData({
           isShowConfirm: false,
         })
