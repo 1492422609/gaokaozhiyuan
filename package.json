@@ -1,0 +1,23 @@
+{
+  "name": "Wechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QutTeam/Wechat2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QutTeam/Wechat2.0/issues"
+  },
+  "homepage": "https://github.com/QutTeam/Wechat2.0#readme",
+  "dependencies": {
+    "miniprogram-table-component": "^1.1.0"
+  }
+}

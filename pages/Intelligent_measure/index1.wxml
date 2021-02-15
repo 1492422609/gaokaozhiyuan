@@ -1,0 +1,119 @@
+<view wx:if="{{daochu}}">
+  <view class="tixing">
+    <view class="tebieshuoming">
+      <view class="biaoti">特别说明:</view>
+      <view class="neirong">1.系统大数据来源于权威教育部门公开数据，本产品仅限于进行相关数据，文本的归纳、整理、清理和分析</view>
+      <view class="neirong">2.部分年份录取数据如果为空，可能是当年不在查询地招生或没有发布、公开此类数据</view>
+      <view class="neirong">
+        3.本产品所提供的高考报考参考数据，如招生数据、录取数据、选科要求、代号代码等，若与院校及相关部门正式公布数据为准，建议用户参考使用时与官方正式发布数据进行核对，本产品将不断进行数据校验，以为用户提供更好的服务体验。
+      </view>
+      <view class="neirong">
+        4.由于高考志愿填报时一个不断变化的过程，本产品提供的查询、指导用后进行科学的报考选择服务，其查询结果和拟定方案仅作为用户高考填报志愿的有效依据，不作为用户最终填报的结果。请用户综合多方面信息后谨慎决定，切勿以单个数据信息填报志愿。
+      </view>
+      <view class="anniu">
+        <view class="quxiao"><button bindtap="quxiao">取消</button></view>
+        <view class="queren"><button bindtap="queren">确认</button></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="img">
+  <view class="img2">
+    <span>
+      <image src="../../images/tupian2.png"></image>
+      <span class="i5">智能筛选 </span>
+      <text></text>
+      <span bindtap="">
+        <text class="i6" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;从高到低 </text>
+        <image class="i7" src="../../images/shangyi.png"></image>
+      </span>
+      <span bindtap="">
+        <text class="i6" decode="{{true}}">&nbsp;&nbsp;从低到高</text>
+        <image class="i7" src="../../images/2222.png"></image>
+      </span>
+    </span>
+    <view class="s2">
+      <text class="s1">办学层次</text>
+      <input class="in1" maxlength="0" name="title" value="{{text1}}" placeholder="请选择"></input>
+      <image bindtap="tap1" class="arrow-r" src="../../images/arrow-r-0.png"></image>
+    </view>
+    <view class="{{bindtap1?'show':'hide'}}">
+      <view class="s6">
+        <radio-group name="radio" bindchange="later">
+          <label>
+            <radio value="本科" />本科 </label>
+          <text decode="{{true}}">&nbsp;&nbsp;</text>
+          <label>
+            <radio value="专科" />专科</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="s2">
+      <text class="s1">所在地区</text>
+      <input class="in1" maxlength="0" name="title" value="{{text2}}" placeholder="请选择"></input>
+      <image class="arrow-r" bindtap="tap2" src="../../images/arrow-r-0.png"></image>
+    </view>
+    <view class="{{bindtap2?'show':'hide'}}">
+      <!-- peopleHide -->
+      <view class="s6">
+
+      </view>
+    </view>
+
+    <view class="s2">
+      <text class="s1">院校特性</text>
+      <input class="in1" maxlength="0" name="title" value="{{text3}}" placeholder="请选择"></input>
+      <image class="arrow-r" bindtap="tap3" src="../../images/arrow-r-0.png"></image>
+    </view>
+
+    <view class="s8" class="{{bindtap3?'show':'hide'}}">
+      <!-- peopleHide -->
+      <checkbox-group bindchange="HandelItemChange">
+        <checkbox class="blo" value="{{item.value}}" wx:for="{{list}}" wx:key="id">
+          {{item.name}}
+        </checkbox>
+      </checkbox-group>
+
+    </view>
+
+    <view class="s2">
+      <text class="s1">选科要求</text>
+      <input class="in1" maxlength="0" name="title" value="{{text4}}" placeholder="请选择"></input>
+      <image class="arrow-r" bindtap="tap4" src="../../images/arrow-r-0.png"></image>
+    </view>
+    <view class="{{bindtap4?'show':'hide'}}">
+      <!-- peopleHide -->
+      <view class="s6"></view>
+    </view>
+    <view class="s2">
+      <text class="s1">专业简称</text>
+      <input class="in1" maxlength="0" name="title" value="{{text5}}" placeholder="请选择(最多可选择五个)"></input>
+      <image class="arrow-r" bindtap="tap5" src="../../images/arrow-r-0.png"></image>
+    </view>
+    <view class="{{bindtap5?'show':'hide'}}">
+      <!-- peopleHide -->
+      <view class="s6">
+
+      </view>
+    </view>
+  </view>
+
+  <view class="img3">
+    <view class="table1">
+      <table headers="{{tableHeader}}" data="{{row}}" stripe="{{stripe}}" border="{{border}}" bindtap="onRowClick" />
+    </view>
+    <view class="d1">
+      <div class="ziti">......更多信息请付费后查看......</div>
+      <button class="b1" plain="true">去付款</button>
+    </view>
+    <view class="d2">
+      <view class="ziti1">共计123条信息</view>
+
+      <button class="mini-btn" type="default" size="mini" bindtap="daochu">导出详细表单</button>
+      <button class="mini-btn" type="default" size="mini" bindtap="xingcheng">形成我的志愿表</button>
+    </view>
+  </view>
+</view>

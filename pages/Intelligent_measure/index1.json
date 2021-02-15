@@ -1,0 +1,10 @@
+{
+
+  "usingComponents": {
+    "table": "/miniprogram_npm/miniprogram-table-component"
+  },
+  "navigationBarTitleText":"智能筛选"
+   
+  
+}
+

@@ -7,7 +7,7 @@
         together</text>
      <view class="content">
         <view class="hd" style="transform:rotazeZ({{angle}}deg);">
-           <image class="logo" src="../../images/logo.png"></image>
+           <!-- <image class="logo" src="../../images/logo.png"></image> -->
            <image class="wave" mode="aspectFill" src="../../images/wave.png"></image>
            <image class="wave wave-bg" mode="aspectFill" src="../../images/wave.png"></image><!-- mode为自适应 -->
         </view>

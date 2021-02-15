@@ -8,31 +8,6 @@
 </view>
 </view> -->
 
-<block wx:if="{{isShowConfirm}}">
-      <view class='toast-box'>
-        <view class='toastbg'></view>
-        <view class='showToast'>
-            <view class='toast-title'>
-                <text>手机号码填写（仅需填写一次）</text>
-            </view>
-            <view class='toast-main'>
-                <view class='toast-input'>
-                    <input type="number" placeholder='输入手机号' bindinput='phone' data-name='stuEidtName'></input>
-                </view>
-            </view>
-            <view class='toast-button'>
-                <view class='button1'>
-                    <button catchtap='cancel'>取消</button>
-                </view>
-                <view class='button2'>
-                    <button data-url="../allOrder/allOrder" catchtap='setphone'>确定</button>
-                </view>
-            </view>
-        </view>
-    </view>
-  </block>
-
-
 <view class="page-body">
 	<view class="btn-area">
 		<navigator class="qingshuruchengji" url="/pages/tianxiechengji/index">请输入成绩</navigator>
@@ -49,7 +24,7 @@
 				<image class="his_images" src="/images/zhuanyezhiyetongs.png"></image>
 				<view class="his_name">专业大全</view>
 			</navigator>
-			<navigator>
+			<navigator url="../Intelligent_measure/index1">
 				<image class="his_images" src="/images/gaishuai.png"></image>
 				<view class="his_name">智能测概率</view>
 			</navigator>
@@ -86,7 +61,7 @@
 	</view>
 	<view class="zhaopianweizhi">
 		<view class="zhaopianjuzhong">
-				<image class="zhaopian" src="/images/gaokaozhiyuanzhidao.png"></image>
+				<image class="zhaopian" src="/images/00000.jpg"></image>
 		</view>
 	</view>
 </view>

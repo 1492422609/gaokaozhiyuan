@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/jiazai/jiazai",
     "pages/index/index",
     "pages/categorys/index",
     "pages/goods_list/index",
@@ -17,7 +16,11 @@
     "pages/new_index/index",
     "pages/scanf-grade/index",
     "pages/tianxiechengji/index",
-    "pages/mydingdan/mydingdan"
+    "pages/mydingdan/mydingdan",
+    "pages/search_page/categorys",
+    "pages/my_advice/index",
+    "pages/jiazai/jiazai",
+    "pages/Intelligent_measure/index1"
   ],
   "tabBar": {
     "color": "#999",

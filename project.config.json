@@ -6,13 +6,13 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": false,
-    "postcss": true,
+    "enhance": true,
+    "postcss": false,
     "preloadBackgroundData": false,
     "minified": true,
     "newFeature": false,
     "coverView": true,
-    "nodeModules": false,
+    "nodeModules": true,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
@@ -23,26 +23,25 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
-    "useCompilerModule": false,
+    "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.2",
-  "appid": "wxe895bb1a185a44d0",
-  "projectname": "miniprogram-3",
+  "appid": "wxbd43ad6494d5522c",
+  "projectname": "%E9%AB%98%E8%80%83%E5%BF%97%E6%84%BF",
   "debugOptions": {
     "hidedInDevtools": []
   },
@@ -63,20 +62,20 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/user/index",
-          "pathName": "pages/user/index",
+          "name": "1",
+          "pathName": "pages/Intelligent_measure/index1",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/tianxiechengji/index",
-          "pathName": "pages/tianxiechengji/index",
+          "name": "pages/jiazai/jiazai",
+          "pathName": "pages/jiazai/jiazai",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/Intelligent_measure/index1",
+          "pathName": "pages/Intelligent_measure/index1",
           "query": "",
           "scene": null
         },
