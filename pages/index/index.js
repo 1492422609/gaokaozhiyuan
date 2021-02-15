@@ -1,95 +1,6 @@
 
-const types = ['default', 'primary', 'warn']
-const pageObject = {
-  data: {
-    defaultSize: 'default',
-    primarySize: 'default',
-    warnSize: 'default',
-    disabled: false,
-    plain: false,
-    loading: false
-  },
-
-  onShareAppMessage() {
-    return {
-      title: 'button',
-      path: 'page/component/pages/button/button'
-    }
-  },
-
-  setDisabled() {
-    this.setData({
-      disabled: !this.data.disabled
-    })
-  },
-
-  setPlain() {
-    this.setData({
-      plain: !this.data.plain
-    })
-  },
-
-  setLoading() {
-    this.setData({
-      loading: !this.data.loading
-    })
-  },
-  
-  onTapDayWeather(){
-    wx.navigateTo({
-      url: '/pages/new_index/index',//gaigai
-    })
-  },
-
-
-  handleContact(e) {
-    console.log(e.detail)
-  },
-
-  handleGetPhoneNumber(e) {
-    console.log(e.detail)
-  },
-
-  handleGetUserInfo(e) {
-    console.log(e.detail)
-  },
-
-  handleOpenSetting(e) {
-    console.log(e.detail.authSetting)
-  },
-
-  handleGetUserInfo(e) {
-    console.log(e.detail.userInfo)
-  }
-}
-
-
-/*
-for (let i = 0; i < types.length; ++i) {
-  (function (type) {
-    pageObject[type] = function () {
-      const key = type + 'Size'
-      const changedData = {}
-      changedData[key] =
-        this.data[key] === 'default' ? 'mini' : 'default'
-      this.setData(changedData)
-    }
-  }(types[i]))
-}
-
-
-
-
-<view class="page-body">
-  <view class="btn-area" id="buttonContainer"> 
-    <button type="default" plain="true" class="mini-btn" bindtap='onTapDayWeather'>请输入成绩</button>   
- </view>
- </view>
-*/
-
 // Page(pageObject)
 Page({
-  pageObject,
   handleGetUserInfo(e) {
     const {
       userInfo
@@ -97,10 +8,75 @@ Page({
     wx.setStorageSync("userinfo", userInfo);
   },
   data:{
-  userinfo:{}
+  userinfo:{},
+  Phone:'',
+  //弹窗不显示
+  isShowConfirm:'false',
+},
+cancel:function(){
+  that.setData({
+    isShowConfirm: false,
+  })
+  wx.navigateTo({
+    url: 'pages/index/index',
+  })
+},
+setphone:function(e){
+  var that=this
+  var openid=wx.getStorageSync('openid')
+  console.log(this.data.Phone)
+  wx.request({
+    url: 'http://wechaiapp.shangweishuju.com/Users/UpdateUserPhone',
+    data: {
+      openID: openid,
+      phone:this.data.Phone
+    },
+    header: {
+      'content-type': 'application/json' //默认值
+    },
+    method: 'POST',
+    success: function (res) {
+      console.log(res)
+      if(res.data.code==2000){
+        that.setData({
+          isShowConfirm: false,
+        })
+        wx.navigateTo({
+          url: 'pages/index/index',
+        })
+      }else{
+        that.setData({
+          isShowConfirm: false,
+        })
+        wx.navigateTo({
+          url: 'pages/index/index',
+        })
+      }
+    }
+  })
+
+},
+phone:function(e){
+this.setData({
+  Phone:e.detail.value,
+})
+},
+onLoad(){
+   const Phone =wx.getStorageSync('Phone')
+   if(Phone){
+     this.setData({
+       isShowConfirm:false,
+     })
+   }
+  else{
+     this.setData({
+        isShowConfirm: false,
+     })
+   }
 },
 onShow(){
   const userinfo=wx.getStorageSync("userinfo");
   this.setData({userinfo})
 }
+
 })
