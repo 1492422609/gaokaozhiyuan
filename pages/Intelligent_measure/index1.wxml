@@ -1,5 +1,6 @@
 <view wx:if="{{daochu}}">
   <view class="tixing">
+    <view bindtap="quxiao" class="tixing"></view>
     <view class="tebieshuoming">
       <view class="biaoti">特别说明:</view>
       <view class="neirong">1.系统大数据来源于权威教育部门公开数据，本产品仅限于进行相关数据，文本的归纳、整理、清理和分析</view>
@@ -8,7 +9,7 @@
         3.本产品所提供的高考报考参考数据，如招生数据、录取数据、选科要求、代号代码等，若与院校及相关部门正式公布数据为准，建议用户参考使用时与官方正式发布数据进行核对，本产品将不断进行数据校验，以为用户提供更好的服务体验。
       </view>
       <view class="neirong">
-        4.由于高考志愿填报时一个不断变化的过程，本产品提供的查询、指导用后进行科学的报考选择服务，其查询结果和拟定方案仅作为用户高考填报志愿的有效依据，不作为用户最终填报的结果。请用户综合多方面信息后谨慎决定，切勿以单个数据信息填报志愿。
+        4.由于高考志愿填报是一个不断变化的过程，本产品提供的查询、指导用后进行科学的报考选择服务，其查询结果和拟定方案仅作为用户高考填报志愿的有效依据，不作为用户最终填报的结果。请用户综合多方面信息后谨慎决定，切勿以单个数据信息填报志愿。
       </view>
       <view class="anniu">
         <view class="quxiao"><button bindtap="quxiao">取消</button></view>
@@ -17,7 +18,28 @@
     </view>
   </view>
 </view>
-<view></view>
+<view wx:if="{{xingcheng}}">
+<view class="tixing">
+  <view bindtap="quxiao" class="tixing"></view>
+<view class="tebieshuoming">
+  <view class="anniu">
+        <view class="quxiao"><button bindtap="quxiao">取消</button></view>
+        <view class="queren"><button bindtap="queren">确认</button></view>
+      </view>
+</view>
+</view>
+</view>
+<view wx:if="{{fukuan}}">
+  <view class="tixing">
+    <view bindtap="quxiao" class="tixing"></view>
+<view class="tebieshuoming">
+  <view class="anniu">
+        <view class="quxiao"><button bindtap="quxiao">取消</button></view>
+        <view class="queren"><button bindtap="queren">确认</button></view>
+      </view>
+</view>
+</view>
+</view>
 <view class="img">
   <view class="img2">
     <span>
@@ -107,7 +129,7 @@
     </view>
     <view class="d1">
       <div class="ziti">......更多信息请付费后查看......</div>
-      <button class="b1" plain="true">去付款</button>
+      <button class="b1" plain="true" bindtap="fukuan">去付款</button>
     </view>
     <view class="d2">
       <view class="ziti1">共计123条信息</view>

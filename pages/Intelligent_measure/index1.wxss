@@ -4,17 +4,17 @@
   opacity: 1;
   position: absolute;
   /* margin-left: :10%; */
-  z-index: 10;/* 层级划分 */
-
+  z-index: 2;
 }
 .tebieshuoming{
   background-color:#fff;
   width:90%;
   height: 65%;
   position: absolute;
-  margin-top: 30%;
-  margin-left:5%;
+  top: 10%;
+  left:5%;
   box-shadow:6rpx 6rpx 6rpx 6rpx black;
+  z-index: 3;/* 层级划分 */
 }
 .biaoti{
   font-family:"黑体";
