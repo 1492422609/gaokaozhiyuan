@@ -29,7 +29,8 @@
   margin-top: 30rpx;
 }
 .anniu{
-margin-top: 40rpx;
+  top: 30%;
+  position: relative;
   display: flex;
   width: 100%;
 }
@@ -61,7 +62,6 @@ width: 50%;
 }
 .ziti{
   color:#b2b2b2;
- 
 }
 .ziti1{
   color:#b2b2b2;
@@ -214,6 +214,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
   bottom:-80rpx;
 }
 .d1{
+  margin-top: 50rpx;
   height:150rpx;
   position:relative;
   bottom:-75rpx;

@@ -3,7 +3,7 @@ Page({
 
   data: {
     daochu: false,
-    xingcheng: true,
+    xingcheng: false,
     fukuan:false,
     tableHeader: [{
         prop: 'school',
@@ -45,36 +45,41 @@ Page({
     bindtap4: false,
     bindtap5: false,
     outBorder: true,
-    row: [{
-      "id": 1,
-      "school": '青岛理工大学',
-      "class": "软件工程",
-      "rank": '49999',
-      "fengxian": '稳',
-      "status": '选中'
+    row: [
+      // {
+    //   "id": 1,
+    //   "school": '青岛理工大学',
+    //   "class": "软件工程",
+    //   "rank": '49999',
+    //   "fengxian": '稳',
+    //   "status": '选中'
+    // }, 
 
-    }, {
-      "id": 4,
-      "school": '山东理工大学',
-      "class": "软件工程",
-      "rank": '49999',
-      "fengxian": '稳',
-      "status": '选中'
-    }, {
+    // {
+    //   "id": 4,
+    //   "school": '山东理工大学',
+    //   "class": "软件工程",
+    //   "rank": '49999',
+    //   "fengxian": '稳',
+    //   "status": '选中'
+    // },
+     {
       "id": 2,
       "school": '山东理工大学',
       "class": "软件工程",
       "rank": '49999',
       "fengxian": '稳',
       "status": '选中'
-    }, {
+    }, 
+    {
       "id": 3,
       "school": '山东理工大学',
       "class": "软件工程",
       "rank": '49999',
       "fengxian": '稳',
       "status": '选中'
-    }, {
+    },
+    {
       "id": 3,
       "school": '山东理工大学',
       "class": "软件工程",

@@ -20,8 +20,12 @@
 </view>
 <view wx:if="{{xingcheng}}">
 <view class="tixing">
-  <view bindtap="quxiao" class="tixing"></view>
+  <view bindtap="quxiao" class="tixing">
+  </view>
 <view class="tebieshuoming">
+  <view class="table1">
+      <table headers="{{tableHeader}}" data="{{row}}" stripe="{{stripe}}" border="{{border}}" bindtap="onRowClick" />
+    </view>
   <view class="anniu">
         <view class="quxiao"><button bindtap="quxiao">取消</button></view>
         <view class="queren"><button bindtap="queren">确认</button></view>
@@ -43,19 +47,18 @@
 <view class="img">
   <view class="img2">
     <span>
-      <image src="../../images/tupian2.png"></image>
-      <span class="i5">智能筛选 </span>
-      <text></text>
-      <span bindtap="">
-        <text class="i6" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;从高到低 </text>
-        <image class="i7" src="../../images/shangyi.png"></image>
-      </span>
-      <span bindtap="">
-        <text class="i6" decode="{{true}}">&nbsp;&nbsp;从低到高</text>
-        <image class="i7" src="../../images/2222.png"></image>
-      </span>
-    </span>
+  <image src="../../images/tupian2.png" ></image>
+  <span class="i5">智能筛选  </span>
+  <text></text>
+  <span  bindtap="">
+  <text class="i6" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;从高到低 </text>
+  <image class="i7" src="../../images/shangyi.png" ></image>
+  </span>
+  <span  bindtap="">
+  <text class="i6" decode="{{true}}">&nbsp;&nbsp;从低到高</text>
+  <image class="i7" src="../../images/2222.png" ></image>
+  </span>
+</span>
     <view class="s2">
       <text class="s1">办学层次</text>
       <input class="in1" maxlength="0" name="title" value="{{text1}}" placeholder="请选择"></input>
@@ -129,7 +132,9 @@
     </view>
     <view class="d1">
       <div class="ziti">......更多信息请付费后查看......</div>
+    
       <button class="b1" plain="true" bindtap="fukuan">去付款</button>
+ 
     </view>
     <view class="d2">
       <view class="ziti1">共计123条信息</view>
