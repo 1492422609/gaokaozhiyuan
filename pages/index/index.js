@@ -8,6 +8,7 @@ Page({
     wx.setStorageSync("userinfo", userInfo);
   },
   data:{
+    chengji:false,
   userinfo:{},
   Phone:'',
   //弹窗不显示
@@ -62,6 +63,12 @@ this.setData({
 })
 },
 onLoad(){
+  const chengji=wx.getStorageSync('userinfo')
+  if(chengji){
+this.setData({
+  chengji:true
+})
+  }
    const Phone =wx.getStorageSync('Phone')
    if(Phone){
      this.setData({

@@ -26,10 +26,7 @@
   <view class="table1">
       <table headers="{{tableHeader}}" data="{{row}}" stripe="{{stripe}}" border="{{border}}" bindtap="onRowClick" />
     </view>
-  <view class="anniu">
-        <view class="quxiao"><button bindtap="quxiao">取消</button></view>
-        <view class="queren"><button bindtap="queren">确认</button></view>
-      </view>
+
 </view>
 </view>
 </view>
@@ -37,6 +34,17 @@
   <view class="tixing">
     <view bindtap="quxiao" class="tixing"></view>
 <view class="tebieshuoming">
+  <view class="jiage">
+  <view>
+    <text>30块钱</text> <button class="laiyifen">来一份</button>
+  </view>
+  <view>
+    998块钱 <button class="laiyifen">来一份</button>
+  </view>
+  <view>
+    12138块钱 <button class="laiyifen">来一份</button>
+  </view>
+  </view>
   <view class="anniu">
         <view class="quxiao"><button bindtap="quxiao">取消</button></view>
         <view class="queren"><button bindtap="queren">确认</button></view>
@@ -61,7 +69,7 @@
 </span>
     <view class="s2">
       <text class="s1">办学层次</text>
-      <input class="in1" maxlength="0" name="title" value="{{text1}}" placeholder="请选择"></input>
+      <input class="in1" maxlength="0" name="title" value="{{text1}}" placeholder="请选择" bindtap="tap1"></input>
       <image bindtap="tap1" class="arrow-r" src="../../images/arrow-r-0.png"></image>
     </view>
     <view class="{{bindtap1?'show':'hide'}}">
@@ -78,7 +86,7 @@
 
     <view class="s2">
       <text class="s1">所在地区</text>
-      <input class="in1" maxlength="0" name="title" value="{{text2}}" placeholder="请选择"></input>
+      <input class="in1" maxlength="0" name="title" value="{{text2}}" placeholder="请选择" bindtap="tap2"></input>
       <image class="arrow-r" bindtap="tap2" src="../../images/arrow-r-0.png"></image>
     </view>
     <view class="{{bindtap2?'show':'hide'}}">
@@ -90,7 +98,7 @@
 
     <view class="s2">
       <text class="s1">院校特性</text>
-      <input class="in1" maxlength="0" name="title" value="{{text3}}" placeholder="请选择"></input>
+      <input class="in1" maxlength="0" name="title" value="{{text3}}" placeholder="请选择" bindtap="tap3"></input>
       <image class="arrow-r" bindtap="tap3" src="../../images/arrow-r-0.png"></image>
     </view>
 
@@ -106,7 +114,7 @@
 
     <view class="s2">
       <text class="s1">选科要求</text>
-      <input class="in1" maxlength="0" name="title" value="{{text4}}" placeholder="请选择"></input>
+      <input class="in1" maxlength="0" name="title" value="{{text4}}" placeholder="请选择" bindtap="tap4"></input>
       <image class="arrow-r" bindtap="tap4" src="../../images/arrow-r-0.png"></image>
     </view>
     <view class="{{bindtap4?'show':'hide'}}">
@@ -115,7 +123,7 @@
     </view>
     <view class="s2">
       <text class="s1">专业简称</text>
-      <input class="in1" maxlength="0" name="title" value="{{text5}}" placeholder="请选择(最多可选择五个)"></input>
+      <input class="in1" maxlength="0" name="title" value="{{text5}}" placeholder="请选择(最多可选择五个)" bindtap="tap5"></input>
       <image class="arrow-r" bindtap="tap5" src="../../images/arrow-r-0.png"></image>
     </view>
     <view class="{{bindtap5?'show':'hide'}}">

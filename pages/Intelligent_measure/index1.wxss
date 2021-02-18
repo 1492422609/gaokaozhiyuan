@@ -1,3 +1,7 @@
+.laiyifen{
+  width: 30%;
+  display: flex;
+}
 .tixing{
   width: 100%;
   height: 100%;
@@ -29,8 +33,8 @@
   margin-top: 30rpx;
 }
 .anniu{
-  top: 30%;
   position: relative;
+  bottom: 10rpx;
   display: flex;
   width: 100%;
 }

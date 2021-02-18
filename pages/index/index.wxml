@@ -1,14 +1,16 @@
-<!-- <view wx:if="{{userinfo.avatarUrl}}">
-<view class="page-body">
-  <view class="btn-area" >
-<text class="grade">{{userinfo.grade}}分</text>
-<text class="g1">排名{{userinfo.nickName}}名</text>
-<button type="default" disabled="true" plain="true" class="b">查看推荐院校</button>
-</view> 
+<view wx:if="{{chengji}}">
+<view class="chengji">
+<text class="diyige">物理</text>
 </view>
-</view> -->
+<view class="chengji1">
 
-<block wx:if="{{isShowConfirm}}">
+</view>
+<view class="chengji2">
+
+</view>
+</view>
+
+<!-- <block wx:if="{{isShowConfirm}}">
       <view class='toast-box'>
         <view class='toastbg'></view>
         <view class='showToast'>
@@ -30,12 +32,14 @@
             </view>
         </view>
     </view>
-  </block>
+  </block> -->
 
 
-<view class="page-body">
+<view  class="page-body">
 	<view class="btn-area">
+		<view wx:if="{{chengji}}">
 		<navigator class="qingshuruchengji" url="/pages/tianxiechengji/index">请输入成绩</navigator>
+	</view>
 	</view>
 </view>
 <view class="user_content">
