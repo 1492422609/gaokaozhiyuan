@@ -8,13 +8,13 @@ Page({
     wx.setStorageSync("userinfo", userInfo);
   },
   data:{
-    chengji:false,
+  chengji:false,
   userinfo:{},
   Phone:'',
   //弹窗不显示
   isShowConfirm:'false',
 },
-cancel:function(){
+  cancel:function(){
   that.setData({
     isShowConfirm: false,
   })

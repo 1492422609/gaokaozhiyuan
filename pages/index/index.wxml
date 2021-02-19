@@ -1,14 +1,33 @@
-<view wx:if="{{chengji}}">
-<view class="chengji">
-<text class="diyige">物理</text>
+<view class="beijing">
+<view wx:if="{{chengji==false}}">
+<navigator class="qingshuruchengji" url="/pages/tianxiechengji/index">请输入成绩</navigator>
+</view>
+<view wx:if="{{chengji==true}}">
+	<view class="chengji">
+<view class="heiyuan">
+	<view class="neirong">
+		<text>{{}}</text>
+	</view>
+</view>
 </view>
 <view class="chengji1">
-
+<view class="heiyuan">
+	<view class="neirong">
+		<text>{{}}</text>
+	</view>
+</view>
 </view>
 <view class="chengji2">
+<view class="heiyuan">
+	<view class="neirong">
+		<text>{{}}</text>
+	</view>
+</view>
+</view>
+<view class="zongfen"></view>
+</view>
+</view>
 
-</view>
-</view>
 
 <!-- <block wx:if="{{isShowConfirm}}">
       <view class='toast-box'>
@@ -34,22 +53,14 @@
     </view>
   </block> -->
 
-
-<view  class="page-body">
-	<view class="btn-area">
-		<view wx:if="{{chengji}}">
-		<navigator class="qingshuruchengji" url="/pages/tianxiechengji/index">请输入成绩</navigator>
-	</view>
-	</view>
-</view>
 <view class="user_content">
 	<view class="user_main">
 		<view class="history_wrap">
 			<navigator>
 				<image class="his_images" src="/images/xuexiao.png"></image>
 				<view class="his_name">院校大全</view>
-			</navigator>
-			<navigator url="/pages/collect/index">
+		 	 </navigator>
+		 	 <navigator url="/pages/collect/index">
 				<image class="his_images" src="/images/zhuanyezhiyetongs.png"></image>
 				<view class="his_name">专业大全</view>
 			</navigator>
