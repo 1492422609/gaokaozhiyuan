@@ -8,71 +8,13 @@ Page({
     kemuyi:'',
     kemuer:'',
     kemusan:'',
+    diyike:"",dierke:"",disanke:"",
     array: ['科目一','物理', '化学','生物','政治','历史','地理'],
     array0: ['科目二','物理', '化学','生物','政治','历史','地理'],
     array1: ['科目三','物理', '化学','生物','政治','历史','地理'],
-    objectArray: [
-      {
-        id: 0,
-        name: '物理'
-      },
-      {
-        id: 1,
-        name: '化学'
-      },
-      {
-        id: 2,
-        name: '生物'
-      },
-      {
-        id: 3,
-        name: '政治'
-      },
-      {
-        id: 4,
-        name: '历史'
-      },
-      {
-        id: 5,
-        name: '地理'
-      },
-    ],
     index:0,
     index0:0,
     index1:0,
-    // multiArray:[['物理','政治'],['化学','历史'],['生物','地理']],
-    // objectMultiArray:[
-    //   [
-    //     {
-    //       id:0,
-    //       name:'物理'
-    //     },
-    //     {
-    //       id:1,
-    //       name:'政治'
-    //     }
-    //   ],[
-    //     {
-    //       id:0,
-    //       name:'化学'
-    //     },
-    //     {
-    //       id:1,
-    //       name:'历史'
-    //     }
-    //   ],[
-    //     {
-    //       id:0,
-    //       name:'生物'
-    //     },
-    //     {
-    //       id:1,
-    //       name:'地理'
-    //     }
-    //   ]
-    // ],
-    // multiIndex: [0, 0, 0],
-
   },
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -98,57 +40,57 @@ Page({
       multiIndex:e.detail.value
     })
   },
-  // bindMultiPickerColumnChange:function(e){
-  //   console.log('修改的列为',e.detail.column,',值为',e.detail.value);
-  //   var data={
-  //     multiArray:this.data.multiArray,
-  //     multiIndex:this.data.multiIndex
-  //   };
-  //   data.multiIndex[e.detail.column]=e.detail.value;
-  //   switch(e.detail.column){
-  //     case 0:
-  //       switch(data.multiIndex[0]){
-  //         case 0:
-  //           data.multiArray[1]=['化学','历史'];
-  //           data.multiArray[2]=['生物','地理'];
-  //           break;
-  //         case 1:
-  //           data.multiArray[1]=['化学','历史'];
-  //           data.multiArray[2]=['生物','地理'];
-  //           break;
-  //       }
-  //       data.multiIndex[1]=0;
-  //       data.multiIndex[2]=0;
-  //       break;
-  //     case 1:
-  //       switch(data.multiIndex[0]){
-  //         case 0:
-  //           switch(data.multiIndex[1]){
-  //             case 0:
-  //               data.multiArray[2]=['化学','历史'];
-  //               break;
-  //             case 1:  
-  //               data.multiArray[2]=['生物','地理'];
-  //               break;
-  //           }
-  //           break;
-  //         case 1:
-  //           switch(data.multiIndex[1]){
-  //             case 0:
-  //               data.multiArray[2]=['化学','历史']
-  //               break;
-  //             case 1:
-  //               data.multiArray[2]=['生物','地理']
-  //               break;
-  //           }
-  //           break;
-  //       }
-  //       data.multiIndex[2]=0;
-  //       console.log(data.multiIndex);
-  //       break;
-  //   }
-  //   this.setData(data);
-  // },
+  bindMultiPickerColumnChange:function(e){
+    console.log('修改的列为',e.detail.column,',值为',e.detail.value);
+    var data={
+      multiArray:this.data.multiArray,
+      multiIndex:this.data.multiIndex
+    };
+    data.multiIndex[e.detail.column]=e.detail.value;
+    switch(e.detail.column){
+      case 0:
+        switch(data.multiIndex[0]){
+          case 0:
+            data.multiArray[1]=['化学','历史'];
+            data.multiArray[2]=['生物','地理'];
+            break;
+          case 1:
+            data.multiArray[1]=['化学','历史'];
+            data.multiArray[2]=['生物','地理'];
+            break;
+        }
+        data.multiIndex[1]=0;
+        data.multiIndex[2]=0;
+        break;
+      case 1:
+        switch(data.multiIndex[0]){
+          case 0:
+            switch(data.multiIndex[1]){
+              case 0:
+                data.multiArray[2]=['化学','历史'];
+                break;
+              case 1:  
+                data.multiArray[2]=['生物','地理'];
+                break;
+            }
+            break;
+          case 1:
+            switch(data.multiIndex[1]){
+              case 0:
+                data.multiArray[2]=['化学','历史']
+                break;
+              case 1:
+                data.multiArray[2]=['生物','地理']
+                break;
+            }
+            break;
+        }
+        data.multiIndex[2]=0;
+        console.log(data.multiIndex);
+        break;
+    }
+    this.setData(data);
+  },
 
  queding(){
    var that=this
@@ -156,50 +98,67 @@ Page({
    console.log(Phone)
    console.log(that.data.gaokaozongfen)
    console.log(that.data.paiming)
-  //  console.log(that.data.kemuyi)
-  wx.request({
-    url: 'http://wechaiapp.shangweishuju.com/Users/UpdateUserCcore',
-    data: {
-      Phone:Phone,
-      TotalCcore:that.data.gaokaozongfen,
-      Ranking:that.data.paiming,
-      Subject:['that.data.kemuyi','that.data.kemuer','that.data.kemusan'],
-    },
-    header: {
-      'content-type': 'application/json' //默认值
-    },
-    method: 'POST',
-    success: function (res) {
-      if(res.data.code==2000){
-           wx.navigateBack({
-     delta: 0,
-   })
-      }else{
-        wx.switchTab({
-          url: '/pages/index/index',
-        })
+   console.log(that.data.diyike)
+   console.log(that.data)
+   console.log(that.data.index)
+   const  keyi=that.data.index
+   const  keer=that.data.index0
+   const  kesan=that.data.index1
+   console.log(that.data.array[keyi])
+   wx.setStorageSync('kemuyi', that.data.array[keyi])
+   wx.setStorageSync('kemuer', that.data.array[keer])
+   wx.setStorageSync('kemusan', that.data.array[kesan])
+  //  wx.switchTab({
+  //   url: '/pages/index/index',
+  // })
+ if(!that.data.diyike||!that.data.dierke||!that.data.disanke){
+  wx.showModal({
+    title: '提示',
+    content: '请输入单科成绩',
+    success (res) {
+      if (res.confirm) {
+        console.log('用户点击确定')
+      } else if (res.cancel) {
+        console.log('用户点击取消')
       }
-    
     }
   })
+ }
+else{
+  if((!that.data.index||!that.data.index0||!that.data.index1)){
+    wx.showModal({
+      title: '提示',
+      content: '请选择科目类别',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  }else{
+     wx.switchTab({
+    url: '/pages/index/index',
+  })
+  }
+}
 
-
-  console.log()
  },
- kemuyi:function(e){
+ diyike:function(e){
 this.setData({
-  kemuyi:e.detail.value
+  diyike:e.detail.value
 })
 // console.log(this.data.kemuyi)
  },
- kemuer:function(e){
+ dierke:function(e){
   this.setData({
-    kemuer:e.detail.value
+    dierke:e.detail.value
   })
    },
-   kemusan:function(e){
+   disanke:function(e){
     this.setData({
-      kemusan:e.detail.value
+      disanke:e.detail.value
     })
      },
 zongfen:function(e){

@@ -1,13 +1,10 @@
 
 // Page(pageObject)
 Page({
-  handleGetUserInfo(e) {
-    const {
-      userInfo
-    } = e.detail;
-    wx.setStorageSync("userinfo", userInfo);
-  },
   data:{
+    kemuyi:"",
+    kemuer:"",
+    kemusan:"",
   chengji:false,
   userinfo:{},
   Phone:'',
@@ -63,12 +60,19 @@ this.setData({
 })
 },
 onLoad(){
-  const chengji=wx.getStorageSync('userinfo')
-  if(chengji){
+  const kemuyi=wx.getStorageSync('kemuyi')
+  if(kemuyi){
 this.setData({
   chengji:true
 })
+this.setData({kemuyi})
   }
+  var kemuer = wx.getStorageSync("kemuer")
+this.setData({kemuer})
+var kemusan = wx.getStorageSync("kemusan")
+this.setData({kemusan})
+
+
    const Phone =wx.getStorageSync('Phone')
    if(Phone){
      this.setData({

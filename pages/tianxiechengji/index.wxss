@@ -8,9 +8,7 @@
   color: #CACACA;
   width: 100%;
   margin-left: 30rpx;
-
 }
-
 .dierdalan{
   margin-top: 50rpx;
   display: flex;

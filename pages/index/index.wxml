@@ -1,26 +1,28 @@
 <view class="beijing">
 <view wx:if="{{chengji==false}}">
-<navigator class="qingshuruchengji" url="/pages/tianxiechengji/index">请输入成绩</navigator>
+<navigator class="qingshuruchengji" url="/pages/tianxiechengji/index" >请输入成绩</navigator>
 </view>
 <view wx:if="{{chengji==true}}">
 	<view class="chengji">
+		<view class="diqu">地区：山东</view>
+		<view class="xiugaichengji"><navigator url="/pages/tianxiechengji/index" >修改成绩</navigator></view>
 <view class="heiyuan">
 	<view class="neirong">
-		<text>{{}}</text>
+		<text>{{kemuyi}}</text>
 	</view>
 </view>
 </view>
 <view class="chengji1">
 <view class="heiyuan">
 	<view class="neirong">
-		<text>{{}}</text>
+		<text>{{kemuer}}</text>
 	</view>
 </view>
 </view>
 <view class="chengji2">
 <view class="heiyuan">
 	<view class="neirong">
-		<text>{{}}</text>
+		<text>{{kemusan}}</text>
 	</view>
 </view>
 </view>
@@ -77,7 +79,7 @@
 	<view class="daoshudierdahang">
 		<view class="diyikuai">
 			<view class="zhinengtianzhiyuan">
-				<navigator>
+				<navigator url="../Intelligent_measure/index1">
 					<image class="sanzhangtupian" src="/images/zhinengtianbaozhiyuan.png"></image>
 					<view class="shaoweidadian">智能填志愿</view>
 					<view class="huisexiaozi">智能辅助填志愿</view>
