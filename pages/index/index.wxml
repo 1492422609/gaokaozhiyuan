@@ -3,9 +3,12 @@
 <navigator class="qingshuruchengji" url="/pages/tianxiechengji/index" >请输入成绩</navigator>
 </view>
 <view wx:if="{{chengji==true}}">
+	<view class="gaokaozongfen">高考总分为：{{gaokaozongfen}}</view>
+		<view class="gaokaopaiming">排名总位次：{{paiming}}</view>
 	<view class="chengji">
 		<view class="diqu">地区：山东</view>
 		<view class="xiugaichengji"><navigator url="/pages/tianxiechengji/index" >修改成绩</navigator></view>
+
 <view class="heiyuan">
 	<view class="neirong">
 		<text>{{kemuyi}}</text>
@@ -26,7 +29,6 @@
 	</view>
 </view>
 </view>
-<view class="zongfen"></view>
 </view>
 </view>
 

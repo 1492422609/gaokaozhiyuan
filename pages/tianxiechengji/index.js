@@ -5,9 +5,6 @@ Page({
   data: {
     gaokaozongfen:'',
     paiming:'',
-    kemuyi:'',
-    kemuer:'',
-    kemusan:'',
     diyike:"",dierke:"",disanke:"",
     array: ['科目一','物理', '化学','生物','政治','历史','地理'],
     array0: ['科目二','物理', '化学','生物','政治','历史','地理'],
@@ -105,9 +102,17 @@ Page({
    const  keer=that.data.index0
    const  kesan=that.data.index1
    console.log(that.data.array[keyi])
+   wx.setStorageSync('diyike', that.data.index)
+   wx.setStorageSync('dierke', that.data.index0)
+   wx.setStorageSync('disanke', that.data.index1)
    wx.setStorageSync('kemuyi', that.data.array[keyi])
    wx.setStorageSync('kemuer', that.data.array[keer])
    wx.setStorageSync('kemusan', that.data.array[kesan])
+   wx.setStorageSync('gaokaozongfen', that.data.gaokaozongfen)
+   wx.setStorageSync('paiming', that.data.paiming)
+   wx.setStorageSync('diyikechengji', that.data.diyike)
+   wx.setStorageSync('dierkechengji', that.data.dierke)
+   wx.setStorageSync('disankechengji', that.data.disanke)
   //  wx.switchTab({
   //   url: '/pages/index/index',
   // })
@@ -137,10 +142,24 @@ else{
         }
       }
     })
+  }else{if(!that.data.gaokaozongfen){
+    wx.showModal({
+      title: '提示',
+      content: '请填写高考总分',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   }else{
      wx.switchTab({
     url: '/pages/index/index',
   })
+  }
+    
   }
 }
 
@@ -174,5 +193,31 @@ this.setData({
 console.log(this.data.paiming)
 },
 onLoad(){
+
+  var index = wx.getStorageSync("diyike")
+  if(index){this.setData({index})}else{
+    this.setData({index:0})
+  }
+  
+  var index0 = wx.getStorageSync("dierke")
+  if(index0){this.setData({index0})}else{
+    this.setData({index0:0})
+  }
+  var index1 = wx.getStorageSync("disanke")
+  if(index1){this.setData({index1})}else{
+    this.setData({index1:0})
+  }
+  var gaokaozongfen = wx.getStorageSync("gaokaozongfen")
+  this.setData({gaokaozongfen})
+  var paiming = wx.getStorageSync("paiming")
+  this.setData({paiming})
+  var diyike = wx.getStorageSync("diyikechengji")
+  this.setData({diyike})
+  var dierke = wx.getStorageSync("dierkechengji")
+  this.setData({dierke})
+  var disanke = wx.getStorageSync("disankechengji")
+  this.setData({disanke})
+
 }
+ 
 })

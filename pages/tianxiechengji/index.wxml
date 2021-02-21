@@ -10,8 +10,8 @@
  </view>
 </picker>
 </view> -->
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image>高考总分<input class="input" name="userName" placeholder="650" bindinput="zongfen"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png" ></image>全省排名<input class="input" name="userName" placeholder="3500" bindinput="paiming"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image>高考总分<input class="input" name="userName" placeholder="{{gaokaozongfen}}" bindinput="zongfen"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png" ></image>全省排名<input class="input" name="userName" placeholder="{{paiming}}" bindinput="paiming"/></view>
 <view class=""></view>
 <view class="tongyong"><image class="xingxing" src="/images/star.png"></image>科目类别 
 <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
@@ -30,8 +30,8 @@
     </view>
 </picker>
 </view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="diyike"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index0]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="dierke"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index1]}} 排名<input class="input" name="userName" placeholder="3500" bindinput="disanke"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index]}} 排名<input class="input" name="userName" placeholder="{{diyike}}" bindinput="diyike"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array0[index0]}} 排名<input class="input" name="userName" placeholder="{{dierke}}" bindinput="dierke"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array0[index1]}} 排名<input class="input" name="userName" placeholder="{{disanke}}" bindinput="disanke"/></view>
 <view class="dibuxiaozi">依据历年数据进行推荐，最新招生计划将在每年6月更新</view>
 <view class="changqueding" id="buttonContainer" bindtap="queding"><button type="primary" class="daqueding">确定</button></view>
