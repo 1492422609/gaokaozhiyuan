@@ -1,6 +1,6 @@
 <view class="gaokao">个人信息填写</view>
 <view class="dierhang">输入成绩信息，为您精准推荐</view>
-<view class="dierdalan"><image class="xingxing" src="/images/star.png"></image>高考省份<input class="input" name="userName" placeholder="山东" indinput="user NameInput"/></view>
+<view class="dierdalan"><image class="xingxing" src="/images/star.png"></image><view>高考省份</view><input class="input" name="userName" placeholder="山东" indinput="user NameInput" /></view>
 <view class="xiaohuangzi">高考地区已经确认不可修改</view>   
 
 <!-- <view class="tongyong"><image class="xingxing" src="/images/star.png"></image>科目类别
@@ -10,10 +10,10 @@
  </view>
 </picker>
 </view> -->
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image>高考总分<input class="input" name="userName" placeholder="{{gaokaozongfen}}" bindinput="zongfen"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png" ></image>全省排名<input class="input" name="userName" placeholder="{{paiming}}" bindinput="paiming"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image><view>高考总分</view><input class="input" name="userName" placeholder="{{gaokaozongfen}}" bindinput="zongfen" type="number"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png" ></image><view>全省排名</view><input class="input" name="userName" placeholder="{{paiming}}" bindinput="paiming" type="number"/></view>
 <view class=""></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image>科目类别 
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image><view>科目类别 </view>
 <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
       {{array[index]}}
@@ -30,8 +30,8 @@
     </view>
 </picker>
 </view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index]}} 排名<input class="input" name="userName" placeholder="{{diyike}}" bindinput="diyike"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array0[index0]}} 排名<input class="input" name="userName" placeholder="{{dierke}}" bindinput="dierke"/></view>
-<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array0[index1]}} 排名<input class="input" name="userName" placeholder="{{disanke}}" bindinput="disanke"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array[index]}} 排名<input class="input" name="userName" placeholder="{{diyike}}" bindinput="diyike" type="number"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array0[index0]}} 排名<input class="input" name="userName" placeholder="{{dierke}}" bindinput="dierke" type="number"/></view>
+<view class="tongyong"><image class="xingxing" src="/images/star.png"></image> {{array0[index1]}} 排名<input class="input" name="userName" placeholder="{{disanke}}" bindinput="disanke" type="number"/></view>
 <view class="dibuxiaozi">依据历年数据进行推荐，最新招生计划将在每年6月更新</view>
 <view class="changqueding" id="buttonContainer" bindtap="queding"><button type="primary" class="daqueding">确定</button></view>

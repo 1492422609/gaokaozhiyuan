@@ -19,6 +19,7 @@
   left:5%;
   box-shadow:6rpx 6rpx 6rpx 6rpx black;
   z-index: 3;/* 层级划分 */
+  overflow:scroll;
 }
 .biaoti{
   font-family:"黑体";
