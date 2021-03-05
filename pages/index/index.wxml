@@ -33,7 +33,7 @@
 </view>
 
 
-<!-- <block wx:if="{{isShowConfirm}}">
+<block wx:if="{{isShowConfirm}}">
       <view class='toast-box'>
         <view class='toastbg'></view>
         <view class='showToast'>
@@ -55,7 +55,7 @@
             </view>
         </view>
     </view>
-  </block> -->
+  </block>
 
 <view class="user_content">
 	<view class="user_main">

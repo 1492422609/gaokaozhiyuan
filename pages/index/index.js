@@ -9,7 +9,7 @@ Page({
   userinfo:{},
   Phone:'',
   //弹窗不显示
-  isShowConfirm:'false',
+  isShowConfirm:true,
 },
   cancel:function(){
   that.setData({
@@ -39,16 +39,12 @@ setphone:function(e){
         that.setData({
           isShowConfirm: false,
         })
-        wx.navigateTo({
-          url: 'pages/index/index',
-        })
+       wx.setStorageSync('Phone', this.data.Phone)
       }else{
         that.setData({
           isShowConfirm: false,
         })
-        wx.navigateTo({
-          url: 'pages/index/index',
-        })
+      
       }
     }
   })
@@ -89,7 +85,7 @@ onShow(){
      }
     else{
        this.setData({
-          isShowConfirm: false,
+          isShowConfirm: true,
        })
      }
 }

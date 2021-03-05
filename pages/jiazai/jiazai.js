@@ -16,9 +16,9 @@ Page({
             url: 'https://api.weixin.qq.com/sns/jscode2session',
             data: {
               js_code: res.code,
-              appid: 'wxe895bb1a185a44d0',
+              appid: 'wxd71e7e36acaf97c2',
               grant_type: 'authorization_code',
-              secret: '262c6a78a2787c00875f66e26a6f8fd3'
+              secret: '6060395c18f11e5847142328024707e1'
             },
             success(res) {
               console.log(res.data.openid)
@@ -90,9 +90,13 @@ Page({
       });
     });
   },
-  // onShow(){
-  //     const userinfo=wx.getStorageSync("userInfo");
-  //     this.setData({userInfo})
-  //   }
+  onShow(){
+    const openid=wx.getStorageSync("openid");
+    if(openid){
+      wx.switchTab({
+        url: '/pages/index/index',
+      })
+    }
+    }
 
 })
