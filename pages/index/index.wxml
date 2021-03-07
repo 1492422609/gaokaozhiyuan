@@ -50,7 +50,7 @@
                     <button catchtap='cancel'>取消</button>
                 </view>
                 <view class='button2'>
-                    <button data-url="../allOrder/allOrder" catchtap='setphone'>确定</button>
+                    <button data-url="../allOrder/allOr" catchtap='setphone'>确定</button>
                 </view>
             </view>
         </view>
@@ -58,7 +58,7 @@
   </block>
 
 <view class="user_content">
-	<view class="user_main">
+	<!-- <view class="user_main">
 		<view class="history_wrap">
 			<navigator>
 				<image class="his_images" src="/images/xuexiao.png"></image>
@@ -77,7 +77,7 @@
 				<view class="his_name">专家咨询</view>
 			</navigator>
 		</view>
-	</view>
+	</view> -->
 	<view class="daoshudierdahang">
 		<view class="diyikuai">
 			<view class="zhinengtianzhiyuan">
