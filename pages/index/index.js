@@ -86,7 +86,7 @@ onShow(){
      }
     else{
        this.setData({
-          isShowConfirm: true,
+          isShowConfirm: false,
        })
      }
 }

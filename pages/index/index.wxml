@@ -1,35 +1,21 @@
-<view class="beijing">
-<view wx:if="{{chengji==false}}">
-<navigator class="qingshuruchengji" url="/pages/tianxiechengji/index" >请输入成绩</navigator>
+<view class="dingbuzi">
+<text class="yinlu">引鹿高考志愿填报</text>
+<view class="yonghao">用好每1分，读理想大学</view>
 </view>
-<view wx:if="{{chengji==true}}">
-	<view class="gaokaozongfen">高考总分为：{{gaokaozongfen}}</view>
-		<view class="gaokaopaiming">排名总位次：{{paiming}}</view>
-	<view class="chengji">
-		<view class="diqu">地区：山东</view>
-		<view class="xiugaichengji"><navigator url="/pages/tianxiechengji/index" >修改成绩</navigator></view>
 
-<view class="heiyuan">
-	<view class="neirong">
-		<text>{{kemuyi}}</text>
+<view class="beijing">
+<view class="kemuyi">
+	<view wx:if="chegnji">
+	<text></text>
+</view>
+</view>
+<view class="zhongxin">
+	<view wx:if="{{chegnji}}==true">
+		<text class="shuru" decode="{{true}}" space="{{true}}">请填写成绩</text>
 	</view>
 </view>
-</view>
-<view class="chengji1">
-<view class="heiyuan">
-	<view class="neirong">
-		<text>{{kemuer}}</text>
-	</view>
-</view>
-</view>
-<view class="chengji2">
-<view class="heiyuan">
-	<view class="neirong">
-		<text>{{kemusan}}</text>
-	</view>
-</view>
-</view>
-</view>
+<view class="kemuer"></view>
+<view class="kemusan"></view>
 </view>
 
 

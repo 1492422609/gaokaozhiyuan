@@ -38,57 +38,57 @@ Page({
       multiIndex:e.detail.value
     })
   },
-  bindMultiPickerColumnChange:function(e){
-    console.log('修改的列为',e.detail.column,',值为',e.detail.value);
-    var data={
-      multiArray:this.data.multiArray,
-      multiIndex:this.data.multiIndex
-    };
-    data.multiIndex[e.detail.column]=e.detail.value;
-    switch(e.detail.column){
-      case 0:
-        switch(data.multiIndex[0]){
-          case 0:
-            data.multiArray[1]=['化学','历史'];
-            data.multiArray[2]=['生物','地理'];
-            break;
-          case 1:
-            data.multiArray[1]=['化学','历史'];
-            data.multiArray[2]=['生物','地理'];
-            break;
-        }
-        data.multiIndex[1]=0;
-        data.multiIndex[2]=0;
-        break;
-      case 1:
-        switch(data.multiIndex[0]){
-          case 0:
-            switch(data.multiIndex[1]){
-              case 0:
-                data.multiArray[2]=['化学','历史'];
-                break;
-              case 1:  
-                data.multiArray[2]=['生物','地理'];
-                break;
-            }
-            break;
-          case 1:
-            switch(data.multiIndex[1]){
-              case 0:
-                data.multiArray[2]=['化学','历史']
-                break;
-              case 1:
-                data.multiArray[2]=['生物','地理']
-                break;
-            }
-            break;
-        }
-        data.multiIndex[2]=0;
-        console.log(data.multiIndex);
-        break;
-    }
-    this.setData(data);
-  },
+  // bindMultiPickerColumnChange:function(e){
+  //   console.log('修改的列为',e.detail.column,',值为',e.detail.value);
+  //   var data={
+  //     multiArray:this.data.multiArray,
+  //     multiIndex:this.data.multiIndex
+  //   };
+  //   data.multiIndex[e.detail.column]=e.detail.value;
+  //   switch(e.detail.column){
+  //     case 0:
+  //       switch(data.multiIndex[0]){
+  //         case 0:
+  //           data.multiArray[1]=['化学','历史'];
+  //           data.multiArray[2]=['生物','地理'];
+  //           break;
+  //         case 1:
+  //           data.multiArray[1]=['化学','历史'];
+  //           data.multiArray[2]=['生物','地理'];
+  //           break;
+  //       }
+  //       data.multiIndex[1]=0;
+  //       data.multiIndex[2]=0;
+  //       break;
+  //     case 1:
+  //       switch(data.multiIndex[0]){
+  //         case 0:
+  //           switch(data.multiIndex[1]){
+  //             case 0:
+  //               data.multiArray[2]=['化学','历史'];
+  //               break;
+  //             case 1:  
+  //               data.multiArray[2]=['生物','地理'];
+  //               break;
+  //           }
+  //           break;
+  //         case 1:
+  //           switch(data.multiIndex[1]){
+  //             case 0:
+  //               data.multiArray[2]=['化学','历史']
+  //               break;
+  //             case 1:
+  //               data.multiArray[2]=['生物','地理']
+  //               break;
+  //           }
+  //           break;
+  //       }
+  //       data.multiIndex[2]=0;
+  //       console.log(data.multiIndex);
+  //       break;
+  //   }
+  //   this.setData(data);
+  // },
 
  queding(){
    var that=this
@@ -193,13 +193,12 @@ this.setData({
 })
 console.log(this.data.paiming)
 },
-onLoad(){
-
+onShow(){
+  var that=this
   var index = wx.getStorageSync("diyike")
   if(index){this.setData({index})}else{
     this.setData({index:0})
   }
-  
   var index0 = wx.getStorageSync("dierke")
   if(index0){this.setData({index0})}else{
     this.setData({index0:0})
@@ -209,15 +208,19 @@ onLoad(){
     this.setData({index1:0})
   }
   var gaokaozongfen = wx.getStorageSync("gaokaozongfen")
-  this.setData({gaokaozongfen})
+  if(gaokaozongfen){
+    this.setData({gaokaozongfen})
+  }else{
+    that.setData({gaokaozongfen:'请输入总分'})
+  }
   var paiming = wx.getStorageSync("paiming")
-  this.setData({paiming})
+  if(paiming){this.setData({paiming})}else{that.setData({paiming:'请输入排名'})}
   var diyike = wx.getStorageSync("diyikechengji")
-  this.setData({diyike})
+  if(diyike){this.setData({diyike})}else{that.setData({diyike:'请输入排名'})}
   var dierke = wx.getStorageSync("dierkechengji")
-  this.setData({dierke})
+  if(dierke){this.setData({dierke})}else{that.setData({dierke:'请输入排名'})}
   var disanke = wx.getStorageSync("disankechengji")
-  this.setData({disanke})
+  if(disanke){this.setData({disanke})}else{that.setData({disanke:'请输入排名'})}
 
 }
  
