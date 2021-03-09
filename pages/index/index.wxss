@@ -36,7 +36,7 @@ page{
 }
 .kemuer{
   margin-top: 5%;
-   margin-left: 42%;
+   margin-left: 4%;
    width: 50px; height: 50px;
    background: #ffbd47;
   position: relative;
@@ -231,7 +231,7 @@ align-items: center;
 
 .toast-title {
   padding-left: 5%;
-  background-color: #2196f3;
+  background-color: rgb(170,30,30);
   color: white;
   padding-top: 2vh;
   padding-bottom: 2vh;

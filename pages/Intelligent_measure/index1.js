@@ -100,13 +100,21 @@ Page({
       "rank": '49999',
       "fengxian": '稳',
       "status": '选中'
-    }],
+    }, {
+      "id": 3,
+      "school": '山东理工大学',
+      "class": "软件工程",
+      "rank": '49999',
+      "fengxian": '稳',
+      "status": '选中'
+    }
+  ],
     msg: '暂无数据',
     clickrow: true,
     list: [{
         id: 0,
-        name: "全部  ",
-        value: "全部  "
+        name: "全部",
+        value: "全部 "
       },
       {
         id: 1,
