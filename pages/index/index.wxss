@@ -18,44 +18,57 @@ page{
   margin-top: 5%;
   margin-left: 10%;
 }
+.wangou1{
+  width: 100px;
+  height: 100px;
+  z-index: 0;
+}
 .kemuyi{
-  margin-top: 5%;
-   margin-left: 42%;
-   width: 50px; height: 50px;
-   background: #ffbd47;
+  top: 5%;
+   left: 42%;
+   width: 10vh; height: 10vh;
+   background: #c00000;
+  position: relative;
+  border-radius: 50%;
+  z-index: 1;
+}
+.kemuer{
+  top: 10%;
+   left: 70%;
+   width: 9vh; height: 9vh;
+   background: #c00000;
   position: relative;
   border-radius: 50%;
 }
-.kemuer{
-  margin-top: 5%;
-   margin-left: 42%;
-   width: 50px; height: 50px;
-   background: #ffbd47;
-  position: relative;
-  border-radius: 50%;
-}
-.kemuer{
-  margin-top: 5%;
-   margin-left: 4%;
-   width: 50px; height: 50px;
-   background: #ffbd47;
+.kemusan{
+  top: -3.9vh;
+   left: 4%;
+   width: 9vh; height: 9vh;
+   background: #c00000;
   position: relative;
   border-radius: 50%;
 }
 .zhongxin{
-  margin-top: 5%;
-  margin-left: 42%;
+  top: 25%;
+  left: 42%;
     background-color:#ffbd47 ;
-    height: 70px;    
-    width: 70px;    
+    height: 13vh;    
+    width: 13vh;    
     border-radius: 50%;
+    position: relative;
+}
+.chengjibufen{
+  top: 15%;
+  position: absolute;
 }
 .shuru{
   position: relative;
-  margin-top: 10%;
- left: 10%;
-  font-size: 40rpx;
+ left: 9%;
+  font-size: 48rpx;
   color: white;
+}
+.tuijian{
+  position: relative;
 }
 .beijing{
   background-image: url(https://s3.ax1x.com/2021/02/02/ynIeV1.png);
@@ -68,50 +81,12 @@ page{
   top:25%;
   background-size: 100% 100%;
   background-repeat:no-repeat;
+  position: relative;
 }
-button{
-  font-size: 35rpx;
-  margin-bottom: 30rpx;
-}
-.button-sp-area{
-  margin: 0 auto;
-  width: 60%;
-}
-.qingshuruchengji{
-  margin-left: 220rpx;
-  margin-top: 180rpx;
-  width: 280rpx;
-  font-size: 50rpx;
-}
-.grade{
- 
-  position: absolute;
-  left:100px;
-  bottom:900rpx;
-  color:#747474;
-  margin-left:70px;
-  font-size:30px;
-  font-weight: 20rpx;
-}
-.g1{
-  position: absolute;
-  left:100px;
-  bottom:860rpx;
-  color:#747474;
-  margin-left:78px;
-  font-size:12px;
-  font-weight: 20rpx;
-}
-.b{
-  position: absolute;
-  left:195rpx;
-  bottom:750rpx;
-  color:#747474;
-  margin-left:90rpx;
-  font-size:27rpx;
-  font-weight: 20rpx;
 
-}
+
+
+
 /* 从这开始 */
 .user_content{
   position: relative;

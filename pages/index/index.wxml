@@ -5,17 +5,16 @@
 
 <view class="beijing">
 <view class="kemuyi">
-	<view wx:if="chegnji">
-	<text></text>
-</view>
+	<image src="../../images/wangou1.png" class="wangou1"></image>
 </view>
 <view class="zhongxin">
-	<view wx:if="{{chegnji}}==true">
-		<text class="shuru" decode="{{true}}" space="{{true}}">请填写成绩</text>
+	<view wx:if="{{chegnji}}==true" class="chengjibufen">
+		<text class="shuru" decode="{{true}}" space="{{true}}">请填写 &nbsp; 成绩</text>
 	</view>
 </view>
 <view class="kemuer"></view>
 <view class="kemusan"></view>
+<view class="tuijian">为您推荐院校</view>
 </view>
 
 
