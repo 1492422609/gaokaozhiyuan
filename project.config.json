@@ -23,12 +23,13 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
@@ -40,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.2",
-  "appid": "wxbd43ad6494d5522c",
+  "appid": "wxd71e7e36acaf97c2",
   "projectname": "%E9%AB%98%E8%80%83%E5%BF%97%E6%84%BF",
   "debugOptions": {
     "hidedInDevtools": []
@@ -82,6 +83,31 @@
         {
           "name": "pages/tianxiechengji/index",
           "pathName": "pages/tianxiechengji/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tianxiechengji/index",
+          "pathName": "pages/tianxiechengji/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/index",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "miniprogram_npm\\miniprogram-table-component\\index.wxml",
+          "pathName": "miniprogram_npm/miniprogram-table-component/index",
+          "query": "",
           "scene": null
         }
       ]

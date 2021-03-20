@@ -2,8 +2,30 @@
 Page({
 
   data: {
+    region:'',
+    index:0,
+    regiontype: ['请选择', '济南',
+    '滨州', 
+    '兖州', 
+    '德州', 
+    '东营', 
+    '菏泽', 
+    '济宁', 
+    '莱芜', 
+    '聊城', 
+    '临沂', 
+    '蓬莱', 
+    '青岛', 
+    '曲阜', 
+    '日照', 
+    '泰安', 
+    '潍坊', 
+    '威海', 
+    '烟台', 
+    '枣庄', 
+    '淄博'] ,
     daochu: false,
-    xingcheng: false,
+    xingcheng: true,
     fukuan:false,
     tableHeader: [{
         prop: 'school',
@@ -18,7 +40,7 @@ Page({
       },
       {
         prop: 'rank',
-        width: 120,
+        width: 130,
         label: '2020录取位次'
       },
       {
@@ -29,7 +51,8 @@ Page({
       {
         prop: 'status',
         width: 90,
-        label: '状态'
+        label: '状态',
+        color: 'rgb(170, 40, 50)'
       }
     ],
     text1: "",
@@ -67,7 +90,9 @@ Page({
       "id": 2,
       "school": '山东理工大学',
       "class": "软件工程",
-      "rank": '49999',
+      "rank1": '49999',
+      "rank2":'2222',
+      "rank3":'2222',
       "fengxian": '稳',
       "status": '选中'
     }, 
@@ -137,13 +162,28 @@ Page({
         value: "国家特色专业"
       }
     ],
-    checkedList: []
+    checkedList: [],
+    xuankeyaoqiu:[{
+      id:1,
+      value:"物化生"
+    }],
+    zhuanyejiancheng:[{
+      id:1,
+      value:"软件工程",
+      name:"软件工程"
+    },{
+      id:2,
+      value:"软件",
+      name:"软件"
+    }]
+
   },
   xingcheng() {
 this.setData({
   xingcheng:true
 })
   },
+  hefaxing:false,
   daochu() {
     this.setData({
       daochu: true
@@ -184,11 +224,54 @@ this.setData({
     let c = true;
     if (checkedList.length >= 1) {
       this.setData({
-        text3: "已选择"
+        text3: "已选择",
+        hefaxing:true
       })
     } else if (checkedList.length < 1) {
       this.setData({
-        text3: "已选择"
+        text3: "请选择",
+        hefaxing:false
+      })
+    }
+
+  },
+  HandelItemChange1(e) {
+    // 1 获取被选中的复选框的值
+    const checkedList = e.detail.value;
+    // 2 进行赋值
+    let c = true;
+    if (checkedList.length >= 1) {
+      this.setData({
+        text4: "已选择",
+        hefaxing:true
+      })
+    } else if (checkedList.length < 1) {
+      this.setData({
+        text4: "请选择",
+        hefaxing:false
+      })
+    }
+
+  },
+  HandelItemChange2(e) {
+    // 1 获取被选中的复选框的值
+    const checkedList = e.detail.value;
+    // 2 进行赋值
+    let c = true;
+    if (checkedList.length >= 1&&checkedList.length<=5) {
+      this.setData({
+        text5: "已选择",
+        hefaxing:true
+      })
+    } else if (checkedList.length < 1) {
+      this.setData({
+        text5: "请选择",
+        hefaxing:false
+      })
+    }else{
+      this.setData({
+        text5: "选择不可以多于五个",
+        hefaxing:false
       })
     }
 
@@ -199,6 +282,37 @@ this.setData({
   onLoad: function (options) {
 
   },
+
+ 
+  // formSubmit: function (e) { 
+  //   var that = this;  
+  //     console.log('form发生了submit事件，携带数据为：', e.detail.value)         console.log(that.data.img_arr)  
+  //       var that = this;  
+  //         var formData = e.detail.value;
+  //  if (e.detail.value.input == '' || e.detail.value.inp2 == '') {          wx.showToast({   
+  //       title: '请填写完整···',    
+  //         }) 
+  //            } else {    
+  //           wx.request({   
+  //             url: 'https:***/submit',//这里的接口请填实际接口     
+  //                data: formData,    
+  //                header: {         
+  //                'Content-Type': 'application/json'   
+  //                        },      
+  //                       success: function (res) {  
+  //                       console.log(res.data)     
+  //                        wx.showtoast({       
+  //                       title: '提交成功'      
+  //                           })        
+  //                             that.setData({        
+  //                                 form_info: ''     
+  //                               })  
+  //                            }
+  //                           })
+  //                          } 
+  //                         },
+                     
+
   tap1: function (e) {
     var that = this;
     that.setData({
@@ -221,19 +335,21 @@ this.setData({
     var that = this;
     that.setData({
       bindtap4: !that.data.bindtap4,
-    });
+    });    
   },
   tap5: function (e) {
     var that = this;
+   
     that.setData({
-      bindtap5: !that.data.bindtap5,
+      bindtap5: !that.data.bindtap5
     });
   },
   later: function (e) {
     // console.log(e);
     var val = e.detail.value;
     this.setData({
-      text1: val
+      text1: val,
+      hefaxing:true
     })
   },
   /**
@@ -242,7 +358,11 @@ this.setData({
   onReady: function () {
 
   },
-
+  bindregionChange :function(e) {
+    this.setData({
+      index: e.detail.value,
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

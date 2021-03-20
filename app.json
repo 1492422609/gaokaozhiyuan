@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/jiazai/jiazai",
     "pages/index/index",
     "pages/categorys/index",
     "pages/goods_list/index",
@@ -19,7 +20,6 @@
     "pages/mydingdan/mydingdan",
     "pages/search_page/categorys",
     "pages/my_advice/index",
-    "pages/jiazai/jiazai",
     "pages/Intelligent_measure/index1"
   ],
   "tabBar": {

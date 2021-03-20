@@ -1,8 +1,24 @@
-.laiyifen{
+.laiyifen {
+position: relative;
+left: -9vh;
+  background-color:#bbe0e3 ;
+  color: #1db460;
+  font-size: 38rpx;
+  border-radius: 30rpx;
   width: 30%;
-  display: flex;
 }
-.tixing{
+.chaxun{
+  position: relative;
+  font-size:3vh ;
+  left: 5vh;
+}
+.yuanjia{
+  position: relative;
+  left: 25vh;
+  top: -4vh;
+  text-decoration:line-through
+}
+.tixing {
   width: 100%;
   height: 100%;
   opacity: 1;
@@ -10,201 +26,280 @@
   /* margin-left: :10%; */
   z-index: 2;
 }
-.tebieshuoming{
-  background-color:#fff;
-  width:90%;
+.submit-btn{
+  display:block;
+   width:40%;
+   margin-bottom: 10rpx;
+   margin-left:150rpx;
+}
+.ak-submit{
+  position: fixed;
+  /* bottom:0; */
+}
+.placeholder-view {
+  width: 100%;
+  height: 20rpx;
+}
+.mar{
+  position: fixed;
+  margin-bottom:70rpx;
+
+}
+.tebieshuoming {
+  background-color: #fff;
+  width: 90%;
   height: 65%;
   position: absolute;
   top: 10%;
-  left:5%;
-  box-shadow:6rpx 6rpx 6rpx 6rpx black;
-  z-index: 3;/* 层级划分 */
-  overflow:scroll;
+  left: 5%;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx black;
+  z-index: 3;
+  /* 层级划分 */
+  overflow: scroll;
 }
-.biaoti{
-  font-family:"黑体";
-  font-size:x-large;
+
+.biaoti {
+  font-family: "黑体";
+  font-size: x-large;
   font-weight: 100;
-  color: #1a6dbb; 
+  color: #1a6dbb;
   margin-top: 20rpx;
   margin-left: 20rpx;
 }
-.neirong{
+
+.neirong {
   margin-left: 20rpx;
   margin-top: 30rpx;
 }
-.anniu{
+
+.anniu {
   position: relative;
   bottom: 10rpx;
   display: flex;
   width: 100%;
 }
-.quxiao{
-width: 50%;
+
+.quxiao {
+  width: 50%;
 }
-.queren{
-width: 50%;
+
+.queren {
+  width: 50%;
 }
+
 /* pages/Intelligent_measure/index1.wxss */
-.img{
-  width:100%;
+.img {
+  width: 100%;
   background-image: url(https://s3.ax1x.com/2021/02/02/ynImUx.png);
   background-size: 100% 100%;
-  height:300rpx;
-  background-repeat:no-repeat;
+  height: 300rpx;
+  background-repeat: no-repeat;
 }
-.img2{
-  overflow:scroll;
+
+.img2 {
+  overflow: scroll;
   /* background-position:60% -30%;  */
-  position:relative;
-  height:430rpx;
-  width:90%;
-  left:5%;
-  top:15%;
+  position: relative;
+  height: 430rpx;
+  width: 90%;
+  left: 5%;
+  top: 15%;
   background-size: 100% 100%;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-image: url(https://s3.ax1x.com/2021/02/02/ynIeV1.png);
 }
-.ziti{
-  color:#b2b2b2;
+.submit-btn{
+    color:#b2b2b2;
+   
+
 }
-.ziti1{
-  color:#b2b2b2;
+
+.ziti {
+  color: #b2b2b2;
+}
+
+.ziti1 {
+  color: #b2b2b2;
   font-size: 23rpx;
-  margin-left:45rpx;
-  margin-bottom:-20rpx;
+  margin-left: 45rpx;
+  margin-bottom: -20rpx;
 }
-button{
+
+.button1 {
   margin-top: 10rpx;
   margin-bottom: 10rpx;
-  width:40%;
- 
+  width: 40%;
+
 }
 
-.img3{
-  overflow:scroll;
- position:relative;
-  bottom:270rpx; 
+.img3 {
+  overflow: scroll;
+  position: relative;
+  bottom: 270rpx;
   background-size: 100% 100%;
-  top:18%;
-  width:90%;
-  background-repeat:no-repeat;
+  top: 18%;
+  width: 90%;
+  background-repeat: no-repeat;
   background-image: url(https://s3.ax1x.com/2021/02/02/ynIVbR.png);
-  height:800rpx;
-  left:5%; 
+  height: 800rpx;
+  left: 5%;
 }
-.table1{
-  height:460rpx;
+
+.table1 {
+  height: 460rpx;
 }
-image{
-  height:50rpx;
-  width:50rpx;
-  padding:20rpx;
+
+image {
+  height: 50rpx;
+  width: 50rpx;
+  padding: 20rpx;
 }
-.i5{
-  text-align:left;
-  font-weight:bold;
+
+.i5 {
+  text-align: left;
+  font-weight: bold;
 
 }
-.mini-btn{
-  
-  margin:30rpx;
+
+.mini-btn {
+
+  margin: 30rpx;
   margin-bottom: 5rpx;
 }
-.i6{
-  font-size:25rpx;
-  padding:1rpx;
+
+.i6 {
+  font-size: 25rpx;
+  padding: 1rpx;
+  position:relative;
+  left:300rpx;
+  bottom:40rpx;
   padding-right: 0%;
 }
-.i7{
-   padding:1rpx;
-   padding-top:-1rpx; 
-   height:35rpx;
-  
-   
-   width:40rpx;
+
+.i7 {
+  padding: 1rpx;
+  padding-top: -1rpx;
+  height: 35rpx;
+  position: relative;
+  left:300rpx;
+  bottom: 40rpx;
+  width: 40rpx;
 }
-.s1{
-  padding:15rpx;
-  padding-right:0rpx;
-  
-  font-weight:510;
+
+.s1 {
+  padding: 15rpx;
+  padding-right: 0rpx;
+
+  font-weight: 510;
   float: left;
 }
-.blo{
+
+.blo {
   display: block;
+  position: relative;
+  left: 150rpx;
+  /* margin:10rpx; */
+  padding: 5rpx;
+}
+.xuanke {
+  display:block;
   position:relative;
   left:150rpx;
-  /* margin:10rpx; */
   padding:5rpx;
 }
-.s2{
-  padding:5rpx;
- 
+.zhuanye {
+  display:block;
+  position:relative;
+  left:150rpx;
+  padding:10rpx;
+  margin-bottom:5rpx;
+}
+.s2 {
+  padding: 2rpx;
+  margin-left:15rpx;
+  position: relative;
   overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.s6{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position:relative;
-    left:250rpx;
+.sub{
+  padding: 5rpx;
+  position: fixed;
+  overflow: auto;
+  display: block;
+ 
 }
-radio{
-  transform:scale(0.7);
-  
+.s6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 250rpx;
 }
-radio-group .wx-radio-input.wx-radio-input-checked{
+
+radio {
+  transform: scale(0.7);
+
+}
+
+radio-group .wx-radio-input.wx-radio-input-checked {
   border: 1rpx solid rgb(170, 30, 30) !important;
-  background:rgb(170, 30, 30) !important;
+  background: rgb(170, 30, 30) !important;
 }
-radio-group .wx-radio-input.wx-radio-input-checked::before{
+
+radio-group .wx-radio-input.wx-radio-input-checked::before {
   border-radius: 50%;
   text-align: center;
   color: #ffffff;
   font-size: 30rpx;
-  transform:translate(-50%, -50%) scale(1);
-  -webkit-transform:translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
 }
-checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   border: none;
   background: rgb(170, 30, 30);
 }
 
 /* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
-checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
-  border-radius: 50%;/* 圆角 */
-  width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
-  height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  /* 圆角 */
+  width: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;
+  /* 选中后对勾大小，不要超过背景的尺寸 */
   line-height: 40rpx;
   text-align: center;
-  font-size:30rpx; 
-  color:#fff; /* 对勾颜色 白色 */
+  font-size: 30rpx;
+  color: #fff;
+  /* 对勾颜色 白色 */
   background: transparent;
-  transform:translate(-50%, -50%) scale(1);
-  -webkit-transform:translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
 }
 
 .arrow-r {
   /* float:right; */
-  position:relative;
-  right:68rpx;
+  position: relative;
+  right: 68rpx;
   width: 15rpx;
   height: 25rpx;
-  
+
 }
-.hide{
+
+.hide {
   display: none;
 }
-.show{
+
+.show {
   display: block;
 }
-.in1{
+
+.in1 {
   text-align: right;
   overflow: hidden;
   color: #b2b2b2;
@@ -213,17 +308,46 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
   align-items: right;
 
 }
-.d2{
-  height:150rpx;
-  position:relative;
-  bottom:-80rpx;
+
+.reg {
+  position: relative;
+
 }
-.d1{
+
+.diqu {
+  position: relative;
+  right: -18rpx;
+  display: none;
+  padding-left: -5rpx;
+}
+
+.region {
+  text-align: right;
+  overflow: hidden;
+  color: #b2b2b2;
+  font-size: 32rpx;
+  position: relative;
+  left: 100rpx;
+  top: 0rpx;
+  display: flex;
+  flex-direction: row;
+  /* align-items: right; */
+
+}
+
+.d2 {
+  height: 150rpx;
+  position: relative;
+  bottom: -80rpx;
+}
+
+.d1 {
   margin-top: 50rpx;
-  height:150rpx;
-  position:relative;
-  bottom:-75rpx;
+  height: 150rpx;
+  position: relative;
+  bottom: -75rpx;
 }
+
 /* .table1{
   
 } */

@@ -1,46 +1,74 @@
 <view class="dingbuzi">
-<text class="yinlu">引鹿高考志愿填报</text>
-<view class="yonghao">用好每1分，读理想大学</view>
+	<text class="yinlu">引鹿高考志愿填报</text>
+	<view class="yonghao">用好每1分，读理想大学</view>
 </view>
 
 <view class="beijing">
-<view class="kemuyi">
-	<image src="../../images/wangou1.png" class="wangou1"></image>
-</view>
-<view class="zhongxin">
-	<view wx:if="{{chegnji}}==true" class="chengjibufen">
-		<text class="shuru" decode="{{true}}" space="{{true}}">请填写 &nbsp; 成绩</text>
+	<view class="diyike">
+		<view class="kemuyi"><text class="kemu">{{kemuyi}}</text></view>
+		<view class="baiyuan1"></view>
+		<image src="../../images/wangou1.png" class="wangou1" mode="widthFix"></image>
 	</view>
+
+	<view class="zhongxin">
+		<navigator url="/pages/tianxiechengji/index">
+		<view wx:if="{{chengji==false}}" class="chengjibufen">
+			<text class="shuru" decode="{{true}}" space="{{true}}">请填写 &nbsp; 成绩</text>
+		</view>
+		<view wx:if="{{chengji==true}}" class="chengjibufen">
+			<text class="shuru">{{gaokaozongfen}}分\n{{paiming}}名</text>
+		</view>
+	</navigator>
+	</view>
+	<view class="dierke">
+	<view class="kemuer"><text class="kemu">{{kemuer}}</text></view>
+	<view class="baiyuan2"></view>
+	<image src="../../images/wangou3.png" class="wangou2" mode="widthFix"></image>
 </view>
-<view class="kemuer"></view>
-<view class="kemusan"></view>
-<view class="tuijian">为您推荐院校</view>
+
+<view class="disanke">
+	<view class="kemusan"><text class="kemu">{{kemusan}}</text></view>
+	<view class="baiyuan3"></view>
+	<image src="../../images/wangou2.png" class="wangou3" mode="widthFix"></image>
+</view>
+<!-- <view class="tuijian">/br</view> -->
+<view class="tuijian"><text>\n\n\n\n\n</text> 
+	<view wx:if="{{chengji==false}}" class="genjufenshu">
+	根据分数，为您推荐院校
+</view>
+<view wx:if="{{chengji==true}}" class="genjufenshu">
+	<text>为您推荐\n大学{{}}所\t专业{{}}个</text>
+</view>
+</view>
+<navigator url="../Intelligent_measure/index1">
+<view class="zhinengshaixuan">智能筛选</view>
+</navigator>
 </view>
 
 
 <block wx:if="{{isShowConfirm}}">
-      <view class='toast-box'>
-        <view class='toastbg'></view>
-        <view class='showToast'>
-            <view class='toast-title'>
-                <text>手机号码填写（仅需填写一次）</text>
-            </view>
-            <view class='toast-main'>
-                <view class='toast-input'>
-                    <input type="number" placeholder='输入手机号' bindinput='phone' data-name='stuEidtName'></input>
-                </view>
-            </view>
-            <view class='toast-button'>
-                <view class='button1'>
-                    <button catchtap='cancel'>取消</button>
-                </view>
-                <view class='button2'>
-                    <button data-url="../allOrder/allOr" catchtap='setphone'>确定</button>
-                </view>
-            </view>
-        </view>
-    </view>
-  </block>
+	<view class='toast-box'>
+		<view class='toastbg'></view>
+		<view class='showToast'>
+			<view class='toast-title'>
+				<text>手机号码填写（仅需填写一次）</text>
+			</view>
+			<view class='toast-main'>
+				<view class='toast-input'>
+					<input type="number" placeholder='输入手机号' bindinput='phone' data-name='stuEidtName'></input>
+				</view>
+			</view>
+			<view class='toast-button'>
+				<view class='button1'>
+					<button catchtap='cancel'>取消</button>
+				</view>
+				<view class='button2'>
+					<button data-url="../allOrder/allOr" catchtap='setphone'>确定</button>
+				</view>
+			</view>
+		</view>
+	</view>
+</block>
 
 <view class="user_content">
 	<!-- <view class="user_main">
@@ -68,29 +96,29 @@
 			<view class="zhinengtianzhiyuan">
 				<navigator url="../Intelligent_measure/index1">
 					<image class="sanzhangtupian" src="/images/zhinengtianbaozhiyuan.png"></image>
-					<view class="shaoweidadian">智能填志愿</view>
-					<view class="huisexiaozi">智能辅助填志愿</view>
+					<view class="shaoweidadian">填报技巧</view>
+					<view class="huisexiaozi">多方面指导技巧</view>
 				</navigator>
 			</view>
 			<view class="zhinengtianzhiyuan">
-				<navigator url="/pages/collect/index">
+				<navigator url="../Intelligent_measure/index1">
 					<image class="sanzhangtupian" src="/images/paihangbang.png"></image>
-					<view class="shaoweidadian">大学排行榜</view>
+					<view class="shaoweidadian">院校查询</view>
 					<view class="huisexiaozi">多维度评析院校</view>
 				</navigator>
 			</view>
 			<view class="zhinengtianzhiyuan">
-				<navigator>
+				<navigator  url="/pages/collect/index">
 					<image class="sanzhangtupian" src="/images/ziwopingce.png"></image>
-					<view class="shaoweidadian">自我测评</view>
-					<view class="huisexiaozi">清晰了解自己</view>
+					<view class="shaoweidadian">一对一预约</view>
+					<view class="huisexiaozi">专家细致咨询</view>
 				</navigator>
 			</view>
 		</view>
 	</view>
 	<view class="zhaopianweizhi">
 		<view class="zhaopianjuzhong">
-				<image class="zhaopian" src="/images/00000.jpg"></image>
+			<image class="zhaopian" src="/images/00000.jpg"></image>
 		</view>
 	</view>
 </view>

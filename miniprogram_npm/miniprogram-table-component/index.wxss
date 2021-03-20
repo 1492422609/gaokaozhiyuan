@@ -8,6 +8,18 @@
   height:550rpx;
  
 }
+.right-jt{
+   position:absolute;
+    left:455rpx;
+    top:10rpx;
+    z-index:1;
+}
+.left-jt{
+  position:absolute;
+  left:320rpx;
+  top:10rpx;
+  z-index:1;
+}
 .thead{
   border-bottom: none;
   display: flex;

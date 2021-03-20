@@ -32,7 +32,9 @@
   width: 100%;
 }
 .changqueding{
-  width:100%
+  position: relative;
+  left: 10%;
+  width:80%
 }
 .input{
   margin-left: 30rpx;

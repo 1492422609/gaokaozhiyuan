@@ -192,13 +192,13 @@ Component({
      // console.log( this.data.data[index]);
      
      
-      if(s=="选中")
+      if(s=="选中✅"||s=="选中")
       {
 
         var newAddr = that.data.data;
         for(var i=0;i<newAddr.length;i++){
           if (i == index){
-            newAddr[i]['status'] = "移除";
+            newAddr[i]['status'] = "移除❎";
           }
         }
         //进行数据的替换
@@ -214,7 +214,7 @@ Component({
         var newAddr = that.data.data;
         for(var i=0;i<newAddr.length;i++){
           if (i == index){
-            newAddr[i]['status'] = "选中";
+            newAddr[i]['status'] = "选中✅";
           }
         }
         //进行数据的替换
@@ -223,8 +223,31 @@ Component({
         })
       }
       
-    }
+    },
+  
+  perYear: function perYear(e) {
+    this.triggerEvent('perYear', e, e.currentTarget.dataset.it);
+    console.log(e);
+    // let s= e.currentTarget.dataset.it.status;
+   
+    // let id=e.currentTarget.dataset.it.id;
+    // let index= e.currentTarget.dataset.column;
+    let that=this;
+   // console.log( this.data.data[index]);
+   
+   
+  
+      that.setData({
+         data:newAddr
+      })
+     // this.data.data.row.status="移除";
+      // this.setData{
+      //   // e.currentTarget.dataset.it.status="移除";
+      // }
+    
+    
   }
+}
 });
 
 /***/ })

@@ -4,6 +4,8 @@
         class="thead {{ border ? 'thead-border' : ''}} header-row-class-name" 
         style="width:{{ scrolWidth }}rpx;"
     >
+      <image class="right-jt" src="../../images/gaibian22.png" bindtap="perYear"></image>
+      <image class="left-jt" src="../../images/gaibian.png" bindtap="nextYear"></image>
       <view 
         wx:for="{{ headers }}" 
         wx:key="*this" 
@@ -27,6 +29,7 @@
         wx:for="{{ data }}" 
         wx:key="*this" 
         wx:for-index="idx"
+        
       >
         <view class="tbody-tr {{ stripe ? 'tbody-tr-stripe' : '' }} {{ border ? 'tbody-tr-border' : ''}} row-class-name">
           <view wx:for-item="head" 
