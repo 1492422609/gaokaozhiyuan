@@ -57,7 +57,6 @@ this.setData({
 })
 },
 onLoad(){
-
 },
 onShow(){
   const userinfo=wx.getStorageSync("userinfo");
@@ -86,7 +85,7 @@ onShow(){
      }
     else{
        this.setData({
-          isShowConfirm: false,
+          isShowConfirm: true,
        })
      }
 }
